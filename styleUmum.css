@@ -1,0 +1,30 @@
+
+/* bagian html dan body */
+html,body{
+    min-width: 250px;
+}
+/* akhir bagian html dan body */
+
+
+/* bagian container */
+.container{
+    display: contents;
+}
+/* akhir bagian container */
+
+
+/* bagian navbar */
+.navbar>ul{
+    /* display */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+
+}
+.navbar>ul li{
+    list-style: none;
+
+}
+
+/* akhir bagian navbar */
