@@ -3,128 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cara Bergabung - SecondLife</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cara Daftar - BerkahSeken</title>
+    
+    <!-- css umum -->
+    <!-- <link rel="stylesheet" href="/style/styleUmum.css"> -->
+    
+    <!-- css khusus halaman cara daftar -->
+    <link rel="stylesheet" href="../style/styleDaftar.css">
+
+    <style>
+        .btn-primary{
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #page4{
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header dan Navigasi -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo"><a href="index.html">Second<span>Life</span></a></div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="catalog.html">Katalog</a></li>
-                    <li><a href="join.html" class="active">Bergabung</a></li>
-                    <li><a href="explore.html">Jelajah</a></li>
-                    <li><a href="contact.html">Kontak</a></li>
+    <div class="head">
+        BerkahSeken
+    </div>
+    
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li id="page1"><a href="about.html">about</a></li>
+                <li id="page2" ><a href="katalog barang.html">Katalog Barang</a></li>
+                <li id="page3"><a href="cara daftar.html">Cara Daftar</a></li>
+                <li id="page4"><a href="#">Daftar</a></li>
+                <li id="page5"><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="sidebar-info">
+                <h3 class="sidebar-title">Keuntungan Menjadi Member</h3>
+                <ul class="benefit-list">
+                    <li class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-text">Akses ke semua barang seken</div>
+                    </li>
+                    <li class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-text">Fitur chat langsung dengan penjual</div>
+                    </li>
+                    <li class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-text">Notifikasi barang baru sesuai wishlist</div>
+                    </li>
+                    <li class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-text">Diskon untuk member setia</div>
+                    </li>
+                    <li class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-text">Jaminan barang sesuai deskripsi</div>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/600');">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Cara Bergabung dengan SecondLife</h1>
-                <p>Jual atau beli barang second dengan mudah dan aman</p>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "Saya sudah belanja 5x di BerkahSeken dan selalu puas dengan kondisi barangnya. Proses verifikasinya sangat ketat!"
+                    </div>
+                    <div class="testimonial-author">- Ahmad, Jakarta</div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section class="join">
-        <div class="container">
-            <h2 class="section-title">Langkah Mudah Bergabung Sebagai Pengguna</h2>
-            <div class="steps-list">
-                <div class="step-item">
-                    <div class="step-icon">1</div>
-                    <div class="step-content">
-                        <h3>Buat Akun</h3>
-                        <p>Daftar dengan menggunakan email atau nomor telepon Anda. Isi formulir pendaftaran dengan data diri yang valid dan ikuti proses verifikasi akun.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-icon">2</div>
-                    <div class="step-content">
-                        <h3>Lengkapi Profil</h3>
-                        <p>Lengkapi informasi profil Anda seperti alamat, nomor telepon, dan foto profil. Informasi yang lengkap akan meningkatkan kepercayaan pembeli atau penjual.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-icon">3</div>
-                    <div class="step-content">
-                        <h3>Verifikasi Identitas</h3>
-                        <p>Unggah kartu identitas (KTP/SIM/Passport) untuk proses verifikasi. Langkah ini penting untuk keamanan transaksi dan mencegah penipuan.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-icon">4</div>
-                    <div class="step-content">
-                        <h3>Pilih Metode Pembayaran</h3>
-                        <p>Tambahkan rekening bank atau e-wallet untuk transaksi. Kami mendukung berbagai metode pembayaran seperti transfer bank, kartu kredit, DANA, OVO, GoPay, dan lainnya.</p>
-                    </div>
-                </div>
-            </div>
-
-            <h2 class="section-title" style="margin-top: 60px;">Cara Menjual Barang di SecondLife</h2>
-            <div class="steps-list">
-                <div class="step-item">
-                    <div class="step-icon">1</div>
-                    <div class="step-content">
-                        <h3>Buat Listing Produk</h3>
-                        <p>Unggah foto barang dari berbagai sudut, tulis deskripsi detail tentang kondisi barang, spesifikasi, dan riwayat penggunaan. Semakin detail informasi yang Anda berikan, semakin tinggi peluang barang Anda terjual.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-icon">2</div>
-                    <div class="step-content">
-                        <h3>Tetapkan Harga</h3>
-                        <p>Tentukan harga yang kompetitif berdasarkan kondisi barang, harga pasaran, dan berapa lama barang telah digunakan. Anda juga bisa mengaktifkan fitur tawar-menawar jika ingin memberikan fleksibilitas harga.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-icon">3</div>
-                    <div class="step-content">
-                        <h3>Kirim Barang ke Warehouse SecondLife</h3>
-                        <p>Setelah listing disetujui, kirim barang Anda ke gudang SecondLife terdekat untuk proses verifikasi kualitas. Tim kami akan memeriksa kondisi barang sesuai dengan deskripsi yang Anda berikan.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-icon">4</div>
-                    <div class="step-content">
-                        <h3>Tunggu Pembeli</h3>
-                        <p>Setelah barang terverifikasi, listing Anda akan aktif di platform. Anda akan menerima notifikasi ketika ada penawaran atau pembelian. Setelah terjual, dana akan ditransfer ke rekening Anda dalam 1-3 hari kerja.</p>
-                    </div>
-                </div>
-            </div>
-
+        
+        <div class="content">
+            <h2 class="content-title">Cara Daftar di BerkahSeken</h2>
             <div class="regional-notice">
-                <h3>Penting: Layanan SecondLife saat ini hanya tersedia di kota-kota besar di Indonesia</h3>
+                <h3>Perhatian: Layanan BerkahSeken saat ini hanya tersedia di kota-kota besar di Indonesia</h3>
                 <p>Jabodetabek, Bandung, Surabaya, Medan, Makassar, Semarang, Yogyakarta, Bali, Batam, dan Palembang. Kami akan segera memperluas layanan ke kota-kota lainnya.</p>
             </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="#" class="btn">Daftar Sekarang</a>
-                <a href="#" class="btn btn-secondary" style="margin-left: 20px;">Unduh Aplikasi</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>SecondLife</h3>
-                    <p>Platform jual beli barang second terpercaya di Indonesia.</p>
-                    <div class="social-links">
-                        <a href="#"><span>FB</span></a>
-                        <a href="#"><span>IG</span></a>
-                        <a href="#"><span>TW</span></a>
-                        <a href="#"><span>YT</span></a>
+            <!-- <div class="registration-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Pilih Metode Pendaftaran</h3>
+                        <p class="step-description">Kamu bisa mendaftar menggunakan email, nomor telepon, atau akun Google/Facebook untuk kemudahan.</p>
+                        <div class="step-image">
+                            <img src="../img/step1.jpeg" alt="Pilih Metode Pendaftaran">
+                        </div>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Tautan Cepat</h3>
-                    <ul>
-                        <li><a href="index.html">Beranda</a></li
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Isi Data Diri</h3>
+                        <p class="step-description">Lengkapi profil dengan nama, alamat, dan kontak yang valid untuk memudahkan proses transaksi.</p>
+                        <div class="step-image">
+                            <img src="../img/step2.jpeg" alt="Isi Data Diri">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Verifikasi Akun</h3>
+                        <p class="step-description">Cek email atau SMS kamu untuk kode verifikasi, lalu masukkan kode tersebut untuk mengaktifkan akun.</p>
+                        <div class="step-image">
+                            <img src="../img/step3.jpeg" alt="Verifikasi Akun">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Selesai & Mulai Jelajahi</h3>
+                        <p class="step-description">Selamat! Kamu sudah bisa menjelajahi katalog dan mulai bertransaksi di BerkahSeken.</p>
+                        <div class="step-image">
+                            <img src="../img/step4.jpeg" alt="Selesai dan Mulai Jelajahi">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="registration-form-section">
+                <h3 class="section-title">Daftar Sekarang</h3>
+                
+                <div class="registration-form">
+                    <div class="form-group">
+                        <label for="fullname">Nama Lengkap</label>
+                        <input type="text" id="fullname" class="form-control" placeholder="Masukkan nama lengkap">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Masukkan email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Masukkan nomor telepon">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Buat password (min. 8 karakter)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Konfirmasi Password</label>
+                        <input type="password" id="confirm-password" class="form-control" placeholder="Konfirmasi password">
+                    </div>
+                    
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="terms" class="form-check-input">
+                        <label for="terms" class="form-check-label">Saya setuju dengan <a href="#">Syarat & Ketentuan</a> BerkahSeken</label>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-register" disabled>Daftar Sekarang</button>
+                    
+                    <div class="alternative-login">
+                        <div class="divider">
+                            <span>Atau daftar dengan</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button class="btn btn-social btn-google">
+                                <img src="../img/google.png" alt="Google"> Google
+                            </button>
+                            <button class="btn btn-social btn-facebook">
+                                <img src="../img/facebook.png" alt="Facebook"> Facebook
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="login-link">
+                    Sudah punya akun? <a href="#">Masuk di sini</a>
+                </div>
+            </div>
+            
+            <div class="faq-section">
+                <h3 class="section-title">Pertanyaan Umum</h3>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Apa syarat untuk menjadi member BerkahSeken?</div>
+                        <div class="accordion-content">
+                            <p>Untuk menjadi member BerkahSeken, kamu hanya perlu berusia minimal 17 tahun, memiliki email aktif, nomor telepon, dan alamat yang valid di Indonesia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Apakah pendaftaran dikenakan biaya?</div>
+                        <div class="accordion-content">
+                            <p>Tidak, pendaftaran sebagai member BerkahSeken sepenuhnya GRATIS. Kami tidak memungut biaya apapun untuk menjadi member.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Berapa lama proses verifikasi akun?</div>
+                        <div class="accordion-content">
+                            <p>Proses verifikasi akun biasanya selesai dalam hitungan menit. Namun, jika ada kendala, maksimal 1x24 jam tim kami akan membantu menyelesaikan masalah.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Bagaimana jika saya lupa password?</div>
+                        <div class="accordion-content">
+                            <p>Jangan khawatir! Kamu bisa menggunakan fitur "Lupa Password" di halaman login. Kami akan mengirimkan link reset password ke email terdaftar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        © 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya
+    </div>
+</body>
+</html>

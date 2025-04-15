@@ -51,8 +51,12 @@ html,body{
         cursor: pointer;
         background-color: black;
         list-style: none;
+        border-radius: 1px;
         
         
+    }
+    .navbar>ul li:hover{
+        background-color: #333;
     }
         /* link */
         .navbar>ul li a{
@@ -72,6 +76,22 @@ html,body{
     .content h3{
         margin: 20px 0px;
     }
+        /* button */
+        button{
+            display: block;
+            background-color: gray;
+            border: none;
+            padding:10px;
+
+        }
+        button a{
+            /* font */
+            color: white;
+            display: inherit;
+            align-items: center;
+            text-decoration: none;
+        }
+        /* akhir button */
     /* akhir bagian content */
 /* akhir bagian container */
 
