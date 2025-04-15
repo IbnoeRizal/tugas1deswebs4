@@ -5,6 +5,12 @@ html,body{
 }
 /* akhir bagian html dan body */
 
+/* bagian head */
+.head>h1{
+    width: fit-content;
+    margin: auto;
+}
+/* akhir bagian head */
 
 /* bagian container */
 .container{
@@ -24,7 +30,7 @@ html,body{
 }
 .navbar>ul li{
     list-style: none;
-
+    padding: 5px;
 }
 
 /* akhir bagian navbar */
