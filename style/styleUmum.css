@@ -1,11 +1,23 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 /* bagian html dan body */
 html,body{
-    min-width: 250px;
+    min-width: 358px;
 }
 /* akhir bagian html dan body */
 
 /* bagian head */
+.head{
+    background-color: #4CAF50;
+    color: white;
+    padding :1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
 .head>h1{
     width: fit-content;
     margin: auto;
@@ -16,21 +28,62 @@ html,body{
 .container{
     display: contents;
 }
-/* akhir bagian container */
-
-
 /* bagian navbar */
+.navbar{
+    background-color: #353535e3;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+}
 .navbar>ul{
     /* display */
+    max-width:542px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding:0;
+    margin: auto;
+    
 
 }
 .navbar>ul li{
-    list-style: none;
     padding: 5px;
+    cursor: pointer;
+    background-color: black;
+    list-style: none;
+    
+    /* font */
+    color: white;
+    display: inherit;
+    align-items: center;
 }
 
 /* akhir bagian navbar */
+/* bagian content */
+.content{
+    margin: 20px;
+}
+.content h3{
+    margin: 20px 0px;
+}
+/* akhir bagian content */
+/* akhir bagian container */
+
+
+
+
+/* awal  footer */
+
+.footer{
+    /* font format */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    
+
+    /* background format */
+    background-color: #333;
+}
+/* akhir footer  */
