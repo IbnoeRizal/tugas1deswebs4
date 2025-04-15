@@ -57,6 +57,10 @@ body {
     background-color: #e8f5e9;
 }
 
+.navbar li>a{
+    text-decoration: none;
+    color: #333;
+}
 #page2 {
     background-color: #4CAF50;
     color: white;
