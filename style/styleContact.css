@@ -57,7 +57,12 @@ body {
     background-color: #e8f5e9;
 }
 
-#page3 {
+.navbar li>a{
+    text-decoration: none;
+    color: #333;
+}
+
+#page5 {
     background-color: #4CAF50;
     color: white;
     font-weight: bold;
