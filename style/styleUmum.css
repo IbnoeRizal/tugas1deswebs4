@@ -28,45 +28,51 @@ html,body{
 .container{
     display: contents;
 }
-/* bagian navbar */
-.navbar{
-    background-color: #353535e3;
-    padding: 10px;
-    position: sticky;
-    top: 0px;
-}
-.navbar>ul{
-    /* display */
-    max-width:542px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding:0;
-    margin: auto;
-    
+    /* bagian navbar */
+    .navbar{
+        background-color: #353535e3;
+        padding: 10px;
+        position: sticky;
+        top: 0px;
+    }
+    .navbar>ul{
+        /* display */
+        max-width:542px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding:0;
+        margin: auto;
+        
 
-}
-.navbar>ul li{
-    padding: 5px;
-    cursor: pointer;
-    background-color: black;
-    list-style: none;
-    
-    /* font */
-    color: white;
-    display: inherit;
-    align-items: center;
-}
+    }
+    .navbar>ul li{
+        padding: 5px;
+        cursor: pointer;
+        background-color: black;
+        list-style: none;
+        
+        
+    }
+        /* link */
+        .navbar>ul li a{
+            /* font */
+            color: white;
+            display: inherit;
+            align-items: center;
+            text-decoration: none;
+        }
+        /* alhir link */
 
-/* akhir bagian navbar */
-/* bagian content */
-.content{
-    margin: 20px;
-}
-.content h3{
-    margin: 20px 0px;
-}
-/* akhir bagian content */
+    /* akhir bagian navbar */
+    /* bagian content */
+    .content{
+        margin: 20px;
+    }
+    .content h3{
+        margin: 20px 0px;
+    }
+    /* akhir bagian content */
 /* akhir bagian container */
 
 
