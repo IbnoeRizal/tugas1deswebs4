@@ -1,140 +1,528 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cara Daftar - BerkahSeken</title>
-    <link rel="stylesheet" href="/css/CaraDaftar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background-color: #f7f9fc;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #34b67a, #2a9d8f);
+        color: white;
+        padding: 1.5rem 0;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo span {
+        color: #ffd166;
+      }
+
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-list li {
+        margin: 0;
+      }
+
+      .nav-list a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+      }
+
+      .nav-list a:hover,
+      .nav-list a.active {
+        color: #34b67a;
+        border-bottom: 3px solid #34b67a;
+      }
+
+      .nav-list a.active {
+        background-color: #eefff7;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .sidebar {
+        flex: 0 0 300px;
+      }
+
+      .sidebar-info {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1.5rem;
+      }
+
+      .sidebar-title {
+        color: #2a9d8f;
+        margin-bottom: 1.2rem;
+        font-size: 1.2rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .sidebar-title:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        background: #ffd166;
+      }
+
+      .benefit-list {
+        list-style: none;
+        margin: 1rem 0;
+      }
+
+      .benefit-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+
+      .benefit-icon {
+        color: #34b67a;
+        font-weight: bold;
+        margin-right: 0.8rem;
+        flex-shrink: 0;
+      }
+
+      .benefit-text {
+        font-size: 0.95rem;
+      }
+
+      .testimonial {
+        background: #f0f7f4;
+        padding: 1.2rem;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        border-left: 4px solid #34b67a;
+      }
+
+      .testimonial-content {
+        font-style: italic;
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .testimonial-author {
+        font-weight: 600;
+        text-align: right;
+        color: #2a9d8f;
+        font-size: 0.9rem;
+      }
+
+      .content {
+        flex: 1;
+        background-color: white;
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .content-title {
+        color: #2a9d8f;
+        margin-bottom: 1.8rem;
+        font-size: 1.8rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .content-title:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 3px;
+        background: #ffd166;
+      }
+
+      .registration-steps {
+        margin: 2rem 0;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed #e0e0e0;
+      }
+
+      .step:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .step-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #34b67a, #2a9d8f);
+        color: white;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 1.5rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 10px rgba(42, 157, 143, 0.2);
+      }
+
+      .step-content {
+        flex: 1;
+      }
+
+      .step-title {
+        color: #2a9d8f;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .step-description {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      .section-title {
+        color: #2a9d8f;
+        margin: 2rem 0 1.2rem;
+        font-size: l.4rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .section-title:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        background: #ffd166;
+      }
+
+      .accordion {
+        margin: 1.5rem 0;
+      }
+
+      .accordion-item {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+
+      .accordion-header {
+        background: #f9f9f9;
+        padding: 1rem 1.5rem;
+        font-weight: 600;
+        color: #333;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .accordion-header:hover {
+        background: #eefff7;
+        color: #2a9d8f;
+      }
+
+      .accordion-header:after {
+        content: '+';
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: #2a9d8f;
+      }
+
+      .accordion-item.active .accordion-header:after {
+        content: '-';
+      }
+
+      .accordion-content {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: white;
+      }
+
+      .accordion-item.active .accordion-content {
+        padding: 1rem 1.5rem;
+        max-height: 500px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #34b67a, #2a9d8f);
+        color: white;
+        border: none;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(42, 157, 143, 0.2);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
+      }
+
+      .footer {
+        background: #264653;
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Responsif untuk mobile */
+      @media (max-width: 992px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          flex: 0 0 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+          padding: 1rem;
+        }
+
+        .nav-list {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .nav-list a {
+          padding: 0.8rem;
+          text-align: center;
+        }
+
+        .container {
+          padding: 0 1rem;
+        }
+
+        .content {
+          padding: 1.5rem;
+        }
+
+        .step {
+          flex-direction: column;
+        }
+
+        .step-number {
+          margin-bottom: 1rem;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <header class="header">
-        <div class="header-content">
-            <a href="index.html" class="logo">Berkah<span>Seken</span></a>
-        </div>
+      <div class="header-content">
+        <a href="index.html" class="logo">Berkah<span>Seken</span></a>
+      </div>
     </header>
 
     <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-list">
-                <li><a href="index.html">About</a></li>
-                <li><a href="KatalogBarang.html">Katalog Barang</a></li>
-                <li><a href="#" class="active">Cara Daftar</a></li>
-                <li><a href="daftar.html">Daftar</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
-            </ul>
-        </div>
+      <div class="nav-container">
+        <ul class="nav-list">
+          <li><a href="index.html">About</a></li>
+          <li><a href="KatalogBarang.html">Katalog Barang</a></li>
+          <li><a href="#" class="active">Cara Daftar</a></li>
+          <li><a href="daftar.html">Daftar</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
     </nav>
-    
+
     <div class="container">
-        <div class="sidebar">
-            <div class="sidebar-info">
-                <h3 class="sidebar-title">Keuntungan Menjadi Member</h3>
-                <ul class="benefit-list">
-                    <li class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div class="benefit-text">Akses ke semua barang seken</div>
-                    </li>
-                    <li class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div class="benefit-text">Fitur chat langsung dengan penjual</div>
-                    </li>
-                    <li class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div class="benefit-text">Notifikasi barang baru sesuai wishlist</div>
-                    </li>
-                    <li class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div class="benefit-text">Diskon untuk member setia</div>
-                    </li>
-                    <li class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div class="benefit-text">Jaminan barang sesuai deskripsi</div>
-                    </li>
-                </ul>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        "Saya sudah belanja 5x di BerkahSeken dan selalu puas dengan kondisi barangnya. Proses verifikasinya sangat ketat!"
-                    </div>
-                    <div class="testimonial-author">- Ahmad, Jakarta</div>
-                </div>
-            </div>
-            
-            <a href="daftar.html" class="cta-button" style="display: block; text-align: center;">Daftar Sekarang</a>
+      <div class="sidebar">
+        <div class="sidebar-info">
+          <h3 class="sidebar-title">Keuntungan Menjadi Member</h3>
+          <ul class="benefit-list">
+            <li class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">Akses ke semua barang seken</div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">Fitur chat langsung dengan penjual</div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">Notifikasi barang baru sesuai wishlist</div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">Diskon untuk member setia</div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">Jaminan barang sesuai deskripsi</div>
+            </li>
+          </ul>
+
+          <div class="testimonial">
+            <div class="testimonial-content">"Saya sudah belanja 5x di BerkahSeken dan selalu puas dengan kondisi barangnya. Proses verifikasinya sangat ketat!"</div>
+            <div class="testimonial-author">- Ahmad, Jakarta</div>
+          </div>
         </div>
-        
-        <div class="content">
-            <h2 class="content-title">Cara Daftar di BerkahSeken</h2>
-            
-            <div class="registration-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Pilih Metode Pendaftaran</h3>
-                        <p class="step-description">Kamu bisa mendaftar menggunakan email, nomor telepon, atau akun Google/Facebook untuk kemudahan. Pilih metode yang paling nyaman untukmu.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Isi Data Diri</h3>
-                        <p class="step-description">Lengkapi profil dengan nama, alamat, dan kontak yang valid untuk memudahkan proses transaksi. Data pribadi kamu aman dan terlindungi di sistem kami.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Verifikasi Akun</h3>
-                        <p class="step-description">Cek email atau SMS kamu untuk kode verifikasi, lalu masukkan kode tersebut untuk mengaktifkan akun. Langkah ini penting untuk keamanan akunmu.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Selesai & Mulai Jelajahi</h3>
-                        <p class="step-description">Selamat! Kamu sudah bisa menjelajahi katalog dan mulai bertransaksi di BerkahSeken. Temukan barang seken berkualitas dengan harga terbaik!</p>
-                    </div>
-                </div>
+
+        <a href="daftar.html" class="cta-button" style="display: block; text-align: center">Daftar Sekarang</a>
+      </div>
+
+      <div class="content">
+        <h2 class="content-title">Cara Daftar di BerkahSeken</h2>
+
+        <div class="registration-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Pilih Metode Pendaftaran</h3>
+              <p class="step-description">Kamu bisa mendaftar menggunakan email, nomor telepon, atau akun Google/Facebook untuk kemudahan. Pilih metode yang paling nyaman untukmu.</p>
             </div>
-            
-            <div class="faq-section">
-                <h3 class="section-title">Pertanyaan Umum</h3>
-                
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header">Apa syarat untuk menjadi member BerkahSeken?</div>
-                        <div class="accordion-content">
-                            <p>Untuk menjadi member BerkahSeken, kamu hanya perlu berusia minimal 17 tahun, memiliki email aktif, nomor telepon, dan alamat yang valid di Indonesia.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="accordion-item">
-                        <div class="accordion-header">Apakah pendaftaran dikenakan biaya?</div>
-                    </div>
-                    
-                    <div class="accordion-item">
-                        <div class="accordion-header">Berapa lama proses verifikasi akun?</div>
-                    </div>
-                    
-                    <div class="accordion-item">
-                        <div class="accordion-header">Bagaimana jika saya lupa password?</div>
-                    </div>
-                </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Isi Data Diri</h3>
+              <p class="step-description">Lengkapi profil dengan nama, alamat, dan kontak yang valid untuk memudahkan proses transaksi. Data pribadi kamu aman dan terlindungi di sistem kami.</p>
             </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Verifikasi Akun</h3>
+              <p class="step-description">Cek email atau SMS kamu untuk kode verifikasi, lalu masukkan kode tersebut untuk mengaktifkan akun. Langkah ini penting untuk keamanan akunmu.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-title">Selesai & Mulai Jelajahi</h3>
+              <p class="step-description">Selamat! Kamu sudah bisa menjelajahi katalog dan mulai bertransaksi di BerkahSeken. Temukan barang seken berkualitas dengan harga terbaik!</p>
+            </div>
+          </div>
         </div>
+
+        <div class="faq-section">
+          <h3 class="section-title">Pertanyaan Umum</h3>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">Apa syarat untuk menjadi member BerkahSeken?</div>
+              <div class="accordion-content">
+                <p>Untuk menjadi member BerkahSeken, kamu hanya perlu berusia minimal 17 tahun, memiliki email aktif, nomor telepon, dan alamat yang valid di Indonesia.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">Apakah pendaftaran dikenakan biaya?</div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">Berapa lama proses verifikasi akun?</div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">Bagaimana jika saya lupa password?</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <footer class="footer">
-        <div class="footer-content">
-            © 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya
-        </div>
+      <div class="footer-content">© 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</div>
     </footer>
-</body>
+  </body>
 </html>
