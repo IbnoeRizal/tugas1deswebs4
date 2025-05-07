@@ -311,7 +311,7 @@
         padding: 0 1.5rem;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.3s ease, padding 0.3s ease;
         background: white;
       }
 
@@ -412,7 +412,7 @@
     <nav class="navbar">
       <div class="nav-container">
         <ul class="nav-list">
-          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="KatalogBarang.html">Katalog Barang</a></li>
           <li><a href="#" class="active">Cara Daftar</a></li>
           <li><a href="daftar.html">Daftar</a></li>
@@ -507,14 +507,23 @@
 
             <div class="accordion-item">
               <div class="accordion-header">Apakah pendaftaran dikenakan biaya?</div>
+              <div class="accordion-content">
+                <p>Tidak, pendaftaran sebagai member BerkahSeken sepenuhnya gratis. Kamu tidak perlu membayar biaya apapun untuk menjadi member dan mengakses semua fitur dasar platform kami.</p>
+              </div>
             </div>
 
             <div class="accordion-item">
               <div class="accordion-header">Berapa lama proses verifikasi akun?</div>
+              <div class="accordion-content">
+                <p>Proses verifikasi akun biasanya hanya membutuhkan waktu beberapa menit. Setelah kamu memasukkan kode verifikasi yang dikirim ke email atau nomor telepon, akun akan langsung aktif dan siap digunakan.</p>
+              </div>
             </div>
 
             <div class="accordion-item">
               <div class="accordion-header">Bagaimana jika saya lupa password?</div>
+              <div class="accordion-content">
+                <p>Jangan khawatir! Kamu bisa mengklik "Lupa Password" di halaman login, masukkan email terdaftar, dan ikuti petunjuk reset password yang dikirim ke emailmu. Proses ini mudah dan cepat.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -524,5 +533,28 @@
     <footer class="footer">
       <div class="footer-content">© 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</div>
     </footer>
+
+    <script>
+      // Script untuk fitur dropdown/accordion
+      document.addEventListener('DOMContentLoaded', function() {
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+          header.addEventListener('click', function() {
+            // Toggle active class pada item yang diklik
+            const parentItem = this.parentElement;
+            parentItem.classList.toggle('active');
+            
+            // Opsional: Tutup accordion lain saat satu dibuka (uncomment jika diinginkan)
+            // const allItems = document.querySelectorAll('.accordion-item');
+            // allItems.forEach(item => {
+            //   if (item !== parentItem) {
+            //     item.classList.remove('active');
+            //   }
+            // });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
