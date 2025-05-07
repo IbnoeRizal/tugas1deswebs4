@@ -1,2 +1,2 @@
 # tugas1deswebs4
-ecommerse dengan menggunakan html dan css
+untuk memenuhi tugas desain web, membuat website E-COMMERCE JUAL BELI BARANG SECOND (BERKAHSEKEN) menggunakan HTML dan CSS 

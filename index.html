@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #34b67a, #2a9d8f);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    color: #ffd166;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-list a:hover, .nav-list a.active {
+    color: #34b67a;
+    border-bottom: 3px solid #34b67a;
+}
+
+.nav-list a.active {
+    background-color: #eefff7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.content h2 {
+    color: #2a9d8f;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.content h2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: #ffd166;
+}
+
+.content h3 {
+    color: #2a9d8f;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.content p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border-left: 4px solid #34b67a;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h4 {
+    color: #2a9d8f;
+    margin-bottom: 0.8rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+}
+
+.category-section {
+    margin: 2rem 0;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.category {
+    background: white;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.category:hover {
+    background: #eefff7;
+    transform: scale(1.03);
+}
+
+.category h4 {
+    color: #2a9d8f;
+    margin: 0.5rem 0;
+}
+
+.tips-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.tips-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.tips-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #34b67a;
+    font-weight: bold;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #34b67a, #2a9d8f);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(42, 157, 143, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
+}
+
+.quality-process {
+    background: #f0f7f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.quality-process h3 {
+    margin-top: 0;
+}
+
+.quality-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.quality-step {
+    flex: 1;
+    min-width: 200px;
+    margin: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #34b67a;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.footer {
+    background: #264653;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-list a {
+        padding: 0.8rem;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .content {
+        padding: 1.5rem;
+    }
+    
+    .quality-steps {
+        flex-direction: column;
+    }
+    
+    .quality-step {
+        margin: 0.5rem 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">Berkah<span>Seken</span></a>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="#" class="active">About</a></li>
+                <li><a href="KatalogBarang.html">Katalog Barang</a></li>
+                <li><a href="CaraDaftar.html">Cara Daftar</a></li>
+                <li><a href="daftar.htm">Daftar</a></li>
+                <li><a href="kontak.html"">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h2>Tentang BerkahSeken</h2>
+            <p>BerkahSeken adalah platform jual beli barang seken terpercaya yang menghubungkan penjual dan pembeli barang bekas berkualitas. Kami berkomitmen untuk memberikan pengalaman belanja barang seken yang aman, transparan dan nyaman.</p>
+
+            <h3>Apa Itu Barang Seken?</h3>
+            <p>Barang seken adalah barang bekas pakai yang masih layak dan memiliki nilai guna tinggi. Di BerkahSeken, setiap barang seken melewati proses verifikasi kualitas sebelum dipasang listing.</p>
+
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h4>Hemat Biaya</h4>
+                    <p>Menghemat hingga 50% dibanding harga baru dengan kualitas yang tetap terjamin.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Ramah Lingkungan</h4>
+                    <p>Mendukung gaya hidup berkelanjutan dengan memberi barang kesempatan kedua.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Barang Langka</h4>
+                    <p>Akses ke barang langka atau discontinued yang sudah tidak diproduksi lagi.</p>
+                </div>
+            </div>
+
+            <div class="quality-process">
+                <h3>Proses Quality-Check</h3>
+                <div class="quality-steps">
+                    <div class="quality-step">
+                        <div class="step-number">1</div>
+                        <p>Tim kami memeriksa kondisi fisik (goresan, fungsi) dengan teliti</p>
+                    </div>
+                    <div class="quality-step">
+                        <div class="step-number">2</div>
+                        <p>Foto detail diambil untuk transparansi kepada pembeli</p>
+                    </div>
+                    <div class="quality-step">
+                        <div class="step-number">3</div>
+                        <p>Setiap listing mencantumkan grading kondisi (A-C)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3>Kategori Unggulan</h3>
+                <div class="categories">
+                    <div class="category">
+                        <h4>Elektronik</h4>
+                        <p>Smartphone, laptop, kamera, dan gadget lainnya</p>
+                    </div>
+                    <div class="category">
+                        <h4>Otomotif</h4>
+                        <p>Motor, mobil, dan berbagai aksesori kendaraan</p>
+                    </div>
+                    <div class="category">
+                        <h4>Hobi & Koleksi</h4>
+                        <p>Action figure, buku langka, vinyl, dan koleksi unik</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Tips Memilih Barang Seken</h3>
+            <ul class="tips-list">
+                <li>Perhatikan grading kondisi dan deskripsi lengkap sebelum membeli</li>
+                <li>Bandingkan harga pasaran sebelum melakukan negosiasi</li>
+                <li>Baca review penjual untuk memastikan reputasi dan kualitas layanan</li>
+                <li>Ajukan pertanyaan spesifik mengenai kondisi barang</li>
+                <li>Gunakan fitur escrow BerkahSeken untuk transaksi aman</li>
+            </ul>
+
+            <h3>Siap Berburu Barang Seken?</h3>
+            <p>Daftar sekarang di BerkahSeken dan temukan harta karun second-hand impianmu! Nikmati pengalaman jual beli barang bekas yang aman dan menyenangkan.</p>
+
+            <a href="CaraDaftar.html" class="cta-button">Daftar Gratis Sekarang</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            © 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya
+        </div>
+    </footer>
+</body>
+
+</html>
