@@ -338,6 +338,7 @@
         justify-content: center;
         margin-top: 2rem;
         gap: 0.5rem;
+        flex-wrap: wrap;
       }
 
       .pagination-item {
@@ -538,13 +539,13 @@
           <div class="filter-group"><input type="checkbox" id="elektronik" checked /><label for="elektronik">Elektronik</label></div>
           <div class="filter-group"><input type="checkbox" id="otomotif" checked /><label for="otomotif">Otomotif</label></div>
           <div class="filter-group"><input type="checkbox" id="hobi" checked /><label for="hobi">Hobi & Koleksi</label></div>
-          <div class="filter-group"><input type="checkbox" id="fashion" /><label for="fashion">Fashion</label></div>
-          <div class="filter-group"><input type="checkbox" id="furniture" /><label for="furniture">Furniture</label></div>
+          <div class="filter-group"><input type="checkbox" id="fashion" checked /><label for="fashion">Fashion</label></div>
+          <div class="filter-group"><input type="checkbox" id="furniture" checked /><label for="furniture">Furniture</label></div>
 
           <h3 class="filter-title">Kondisi</h3>
           <div class="filter-group"><input type="checkbox" id="kondisiA" checked /><label for="kondisiA">Kondisi A (Seperti Baru)</label></div>
           <div class="filter-group"><input type="checkbox" id="kondisiB" checked /><label for="kondisiB">Kondisi B (Bagus)</label></div>
-          <div class="filter-group"><input type="checkbox" id="kondisiC" /><label for="kondisiC">Kondisi C (Cukup)</label></div>
+          <div class="filter-group"><input type="checkbox" id="kondisiC" checked /><label for="kondisiC">Kondisi C (Cukup)</label></div>
 
           <h3 class="filter-title">Rentang Harga</h3>
           <div class="price-range">
@@ -575,201 +576,11 @@
           </div>
 
           <div class="product-grid" id="product-grid">
-            <!-- Produk 1 -->
-            <div class="product-card" data-category="elektronik" data-condition="A" data-price="12500000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Smartphone Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi A</div>
-                <div class="product-name">iPhone 13 Pro 256GB - Graphite</div>
-                <div class="product-price">Rp 12.500.000</div>
-                <div class="product-date">Tersedia sejak: 12 Apr 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="1">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="1">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 2 -->
-            <div class="product-card" data-category="elektronik" data-condition="B" data-price="14300000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Laptop Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi B</div>
-                <div class="product-name">MacBook Air M2 - 8GB/256GB</div>
-                <div class="product-price">Rp 14.300.000</div>
-                <div class="product-date">Tersedia sejak: 10 Apr 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="2">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="2">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 3 -->
-            <div class="product-card" data-category="elektronik" data-condition="A" data-price="18900000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Kamera Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi A</div>
-                <div class="product-name">Sony Alpha A7 III Kit 28-70mm</div>
-                <div class="product-price">Rp 18.900.000</div>
-                <div class="product-date">Tersedia sejak: 14 Apr 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="3">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="3">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 4 -->
-            <div class="product-card" data-category="otomotif" data-condition="B" data-price="28500000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Sepeda Motor Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi B</div>
-                <div class="product-name">Honda PCX 160 2023 - Hitam</div>
-                <div class="product-price">Rp 28.500.000</div>
-                <div class="product-date">Tersedia sejak: 9 Apr 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="4">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="4">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 5 -->
-            <div class="product-card" data-category="hobi" data-condition="A" data-price="7200000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Action Figure Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi A</div>
-                <div class="product-name">Hot Toys Iron Man Mark LXXXV</div>
-                <div class="product-price">Rp 7.200.000</div>
-                <div class="product-date">Tersedia sejak: 11 Apr 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="5">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="5">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 6 -->
-            <div class="product-card" data-category="hobi" data-condition="B" data-price="950000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Vinyl Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi B</div>
-                <div class="product-name">Vinyl Pink Floyd - The Dark Side of the Moon</div>
-                <div class="product-price">Rp 950.000</div>
-                <div class="product-date">Tersedia sejak: 8 Apr 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="6">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="6">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 7 (Baru) -->
-            <div class="product-card" data-category="elektronik" data-condition="A" data-price="5800000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Tablet Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi A</div>
-                <div class="product-name">iPad Air 2022 - 64GB WiFi</div>
-                <div class="product-price">Rp 5.800.000</div>
-                <div class="product-date">Tersedia sejak: 5 May 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="7">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="7">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 8 (Baru) -->
-            <div class="product-card" data-category="furniture" data-condition="B" data-price="3500000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Sofa Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi B</div>
-                <div class="product-name">Sofa 3 Seater Minimalis - Abu-abu</div>
-                <div class="product-price">Rp 3.500.000</div>
-                <div class="product-date">Tersedia sejak: 3 May 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="8">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="8">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 9 (Baru) -->
-            <div class="product-card" data-category="fashion" data-condition="A" data-price="2300000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Tas Branded Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi A</div>
-                <div class="product-name">Tas Tote Coach Original - Black</div>
-                <div class="product-price">Rp 2.300.000</div>
-                <div class="product-date">Tersedia sejak: 1 May 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="9">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="9">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 10 (Baru) -->
-            <div class="product-card" data-category="otomotif" data-condition="A" data-price="265000000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Mobil Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi A</div>
-                <div class="product-name">Toyota Fortuner 2.4 VRZ 2022 - Putih</div>
-                <div class="product-price">Rp 265.000.000</div>
-                <div class="product-date">Tersedia sejak: 2 May 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="10">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="10">Detail</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Produk 11 (Baru) -->
-            <div class="product-card" data-category="hobi" data-condition="B" data-price="4750000">
-              <div class="product-image">
-                <img src="/api/placeholder/400/320" alt="Gitar Listrik Bekas" />
-              </div>
-              <div class="product-info">
-                <div class="product-condition">Kondisi B</div>
-                <div class="product-name">Fender Stratocaster MIM 2019 - Sunburst</div>
-                <div class="product-price">Rp 4.750.000</div>
-                <div class="product-date">Tersedia sejak: 30 Apr 2025</div>
-                <div class="product-action">
-                  <button class="btn btn-primary buy-now-btn" data-product-id="11">Beli Sekarang</button>
-                  <button class="btn btn-outline detail-btn" data-product-id="11">Detail</button>
-                </div>
-              </div>
-            </div>
+            <!-- Product cards will be dynamically inserted here -->
           </div>
 
           <div class="pagination" id="pagination">
-            <div class="pagination-item active" data-page="1">1</div>
-            <div class="pagination-item" data-page="2">2</div>
-            <div class="pagination-item" data-page="3">3</div>
-            <div class="pagination-item" data-page="4">4</div>
-            <div class="pagination-item" data-page="5">5</div>
-            <div class="pagination-item" data-page="next">&gt;</div>
+            <!-- Pagination items will be dynamically inserted here -->
           </div>
         </section>
       </main>
@@ -821,7 +632,7 @@
     <div class="footer">© 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</div>
 
     <script>
-      // Data produk
+      // Data produk (expanded with additional products for 5+ pages)
       const products = [
         {
           id: 1,
@@ -933,333 +744,598 @@
           date: "30 Apr 2025",
           image: "/api/placeholder/400/320"
         },
+        // Additional products for page 2
+        {
+          id: 12,
+          name: "Samsung Galaxy S24 Ultra - Titanium Black",
+          price: 15800000,
+          condition: "A",
+          category: "elektronik",
+          description: "Samsung Galaxy S24 Ultra dengan memory 256GB. Kondisi seperti baru, baterai 98%, fitur AI terbaru, kamera 200MP sangat jernih.",
+          date: "29 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 13,
+          name: "Sepeda Polygon Strattos S3 - Red",
+          price: 7500000,
+          condition: "B",
+          category: "hobi",
+          description: "Sepeda balap Polygon Strattos S3 warna merah. Frame carbon, groupset Shimano 105, kondisi terawat dengan beberapa goresan ringan.",
+          date: "28 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 14,
+          name: "Canon EOS R6 Kit 24-105mm",
+          price: 24700000,
+          condition: "A",
+          category: "elektronik",
+          description: "Kamera mirrorless Canon EOS R6 dengan lensa kit 24-105mm. Kondisi seperti baru, shutter count rendah, IBIS sangat stabil untuk video.",
+          date: "27 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 15,
+          name: "Meja Kerja Industrial - Oak",
+          price: 2100000,
+          condition: "B",
+          category: "furniture",
+          description: "Meja kerja bergaya industrial dengan top kayu oak solid dan kaki besi. Luas permukaan 140x70cm, dilengkapi dengan rak penyimpanan.",
+          date: "26 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 16,
+          name: "Jam Tangan Seiko Prospex SRPE93",
+          price: 4350000,
+          condition: "A",
+          category: "fashion",
+          description: "Seiko Prospex 'Turtle' SRPE93 dengan diameter 45mm. Kondisi seperti baru, water resistant 200m, bezel diver yang responsif.",
+          date: "25 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 17,
+          name: "Honda Brio RS 2022 - Orange",
+          price: 155000000,
+          condition: "A",
+          category: "otomotif",
+          description: "Honda Brio RS tahun 2022 warna orange. Kilometer rendah (8.000 KM), fitur lengkap, sangat ekonomis dan lincah untuk mobilitas perkotaan.",
+          date: "24 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        // Additional products for page 3
+        {
+          id: 18,
+          name: "Yamaha Keyboard PSR-SX900",
+          price: 18900000,
+          condition: "B",
+          category: "hobi",
+          description: "Keyboard Yamaha PSR-SX900 dengan 61 keys. Fitur lengkap, suara berkualitas tinggi, dan interface yang intuitif untuk produksi musik.",
+          date: "23 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 19,
+          name: "Asus ROG Zephyrus G14 2023",
+          price: 18500000,
+          condition: "A",
+          category: "elektronik",
+          description: "Laptop gaming Asus ROG Zephyrus G14 dengan Ryzen 9 dan RTX 4070. Kondisi seperti baru, performa tinggi dengan portabilitas yang baik.",
+          date: "22 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 19,
+          name: "Asus ROG Zephyrus G14 2023",
+          price: 18500000,
+          condition: "A",
+          category: "elektronik",
+          description: "Laptop gaming Asus ROG Zephyrus G14 dengan Ryzen 9 dan RTX 4070. Kondisi seperti baru, performa tinggi dengan portabilitas yang baik.",
+          date: "22 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 20,
+          name: "Sepatu Running Nike Pegasus 39",
+          price: 1650000,
+          condition: "B",
+          category: "fashion",
+          description: "Sepatu running Nike Pegasus 39 ukuran 42. Kondisi masih bagus, nyaman untuk berlari jarak jauh dengan bantalan yang responsif.",
+          date: "21 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 21,
+          name: "Lemari Pakaian Sliding Door",
+          price: 3900000,
+          condition: "C",
+          category: "furniture",
+          description: "Lemari pakaian 3 pintu sliding dengan cermin. Dimensi 180x60x200cm, material particle board berkualitas, kondisi masih bagus dengan beberapa goresan.",
+          date: "20 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 22,
+          name: "Samsung Galaxy Tab S9 - 256GB",
+          price: 9200000,
+          condition: "A",
+          category: "elektronik",
+          description: "Tablet Samsung Galaxy Tab S9 dengan S-Pen, memori 256GB. Kondisi seperti baru, layar AMOLED yang jernih, dan performa yang tangguh.",
+          date: "19 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 23,
+          name: "Vespa Primavera 150 - 2022",
+          price: 45000000,
+          condition: "A",
+          category: "otomotif",
+          description: "Vespa Primavera 150 tahun 2022. Kilometer rendah, kondisi seperti baru, warna putih klasik yang elegan dan timeless.",
+          date: "18 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        // Additional products for page 4
+        {
+          id: 24,
+          name: "Kamera GoPro Hero 11 Black",
+          price: 5300000,
+          condition: "B",
+          category: "elektronik",
+          description: "Action camera GoPro Hero 11 Black dengan stabilisasi HyperSmooth 5.0. Kondisi bagus dengan beberapa goresan kecil pada layar.",
+          date: "17 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 25,
+          name: "Jaket Kulit Schott Perfecto",
+          price: 3700000,
+          condition: "B",
+          category: "fashion",
+          description: "Jaket kulit asli Schott Perfecto model 618. Kulit sapi tebal berkualitas, warna hitam klasik yang sudah developing patina yang indah.",
+          date: "16 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 26,
+          name: "Monitor Dell Ultrasharp 27\" 4K",
+          price: 5800000,
+          condition: "A",
+          category: "elektronik",
+          description: "Monitor Dell Ultrasharp 27 inch resolusi 4K dengan color accuracy 99% Adobe RGB. Kondisi seperti baru, ideal untuk designer dan content creator.",
+          date: "15 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 27,
+          name: "Kursi Gaming Secretlab Titan Evo",
+          price: 6500000,
+          condition: "A",
+          category: "furniture",
+          description: "Kursi gaming Secretlab Titan Evo 2022 dengan material SoftWeave Plus. Ergonomis dengan lumbar support yang dapat disesuaikan.",
+          date: "14 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 28,
+          name: "Datsun Go+ Panca 2020",
+          price: 95000000,
+          condition: "B",
+          category: "otomotif",
+          description: "Datsun Go+ Panca tahun 2020 tipe tertinggi. 7 seater yang ekonomis, perawatan rutin, AC dingin dan mesin responsif.",
+          date: "13 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 29,
+          name: "Nintendo Switch OLED - White",
+          price: 4200000,
+          condition: "A",
+          category: "elektronik",
+          description: "Nintendo Switch versi OLED warna putih. Kondisi seperti baru, screen protector terpasang, dockable dengan layar TV.",
+          date: "12 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 30,
+          name: "Karpet Persia Handmade 2x3m",
+          price: 8500000,
+          condition: "B",
+          category: "furniture",
+          description: "Karpet Persia handmade ukuran 2x3m dengan motif klasik. Material wool premium dengan ketebalan yang nyaman untuk kaki.",
+          date: "11 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        // Additional products for page 5
+        {
+          id: 31,
+          name: "iPhone 14 Pro Max 512GB - Gold",
+          price: 13900000,
+          condition: "A",
+          category: "elektronik",
+          description: "iPhone 14 Pro Max 512GB warna Gold. Kondisi seperti baru, Dynamic Island yang interaktif, kamera 48MP yang mengesankan.",
+          date: "10 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 32,
+          name: "Yamaha R15 V4 2023 - Racing Blue",
+          price: 35000000,
+          condition: "A",
+          category: "otomotif",
+          description: "Motor sport Yamaha R15 V4 tahun 2023 warna Racing Blue. Kondisi seperti baru dengan Quick Shifter dan fitur Traction Control.",
+          date: "9 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 33,
+          name: "DJI Mini 3 Pro Combo",
+          price: 8900000,
+          condition: "B",
+          category: "elektronik",
+          description: "Drone DJI Mini 3 Pro dengan Fly More Combo. Kondisi bagus, baterai masih sehat, dapat merekam video 4K dengan sensor 1/1.3\".",
+          date: "8 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 34,
+          name: "Jam Tangan Rolex Datejust Replika",
+          price: 2700000,
+          condition: "A",
+          category: "fashion",
+          description: "Jam tangan Rolex Datejust replika kualitas premium. Mesin automatic, water resistant, dan finish yang rapi menyerupai aslinya.",
+          date: "7 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 35,
+          name: "Kulkas 2 Pintu Samsung Digital Inverter",
+          price: 7800000,
+          condition: "B",
+          category: "elektronik",
+          description: "Kulkas 2 pintu Samsung dengan teknologi Digital Inverter yang hemat energi. Kapasitas 300L, kondisi terawat dan bersih.",
+          date: "6 Apr 2025",
+          image: "/api/placeholder/400/320"
+        },
+        {
+          id: 36,
+          name: "Raket Badminton Yonex Astrox 99 Pro",
+          price: 1850000,
+          condition: "A",
+          category: "hobi",
+          description: "Raket badminton Yonex Astrox 99 Pro original. Head-heavy balance untuk pukulan smash yang mematikan, kondisi seperti baru.",
+          date: "5 Apr 2025",
+          image: "/api/placeholder/400/320"
+        }
       ];
 
-      // Format currency
-      function formatRupiah(angka) {
-        return "Rp " + angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      }
-
-      // Variabel untuk state
+      // Variables for pagination
+      const itemsPerPage = 9;
       let currentPage = 1;
-      const itemsPerPage = 6;
       let filteredProducts = [...products];
 
-      // DOM Elements
+      // DOM elements
       const productGrid = document.getElementById('product-grid');
       const pagination = document.getElementById('pagination');
       const detailModal = document.getElementById('detail-modal');
       const buyModal = document.getElementById('buy-modal');
       const closeModal = document.getElementById('close-modal');
       const closeBuyModal = document.getElementById('close-buy-modal');
-      const modalProductName = document.getElementById('modal-product-name');
-      const modalProductPrice = document.getElementById('modal-product-price');
-      const modalProductDescription = document.getElementById('modal-product-description');
-      const modalProductImage = document.getElementById('modal-product-image');
-      const modalBuyBtn = document.getElementById('modal-buy-btn');
       const modalCloseBtn = document.getElementById('modal-close-btn');
-      const buyProductName = document.getElementById('buy-product-name');
-      const buyProductPrice = document.getElementById('buy-product-price');
-      const confirmBuyBtn = document.getElementById('confirm-buy-btn');
+      const modalBuyBtn = document.getElementById('modal-buy-btn');
       const cancelBuyBtn = document.getElementById('cancel-buy-btn');
+      const confirmBuyBtn = document.getElementById('confirm-buy-btn');
       const successMessage = document.getElementById('success-message');
       const buySuccessMessage = document.getElementById('buy-success-message');
+      const searchInput = document.getElementById('search-input');
+      const searchButton = document.getElementById('search-button');
+      const sortSelect = document.getElementById('sort-select');
+      const applyFilterBtn = document.getElementById('apply-filter');
 
-      // Variabel untuk produk yang sedang dilihat
-      let currentProduct = null;
+      function formatPrice(price) {
+        return 'Rp ' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      }
 
-      // Fungsi untuk menampilkan produk
-      function displayProducts(page) {
-        // Hitung start dan end index
-        const startIndex = (page - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        
-        // Tampilkan produk sesuai pagination
-        const productsToShow = filteredProducts.slice(startIndex, endIndex);
-        
-        // Clear product grid
+
+      function renderProducts() {
         productGrid.innerHTML = '';
         
-        // Tambahkan produk ke grid
-        productsToShow.forEach(product => {
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+        
+        if (paginatedProducts.length === 0) {
+          productGrid.innerHTML = '<div style="text-align: center; grid-column: 1/-1; padding: 2rem;">Tidak ada produk yang sesuai dengan filter Anda.</div>';
+          return;
+        }
+        
+        paginatedProducts.forEach(product => {
           const productCard = document.createElement('div');
           productCard.className = 'product-card';
-          productCard.dataset.category = product.category;
-          productCard.dataset.condition = product.condition;
-          productCard.dataset.price = product.price;
-          
           productCard.innerHTML = `
             <div class="product-image">
-              <img src="${product.image}" alt="${product.name}" />
+              <img src="${product.image}" alt="${product.name}">
             </div>
             <div class="product-info">
-              <div class="product-condition">Kondisi ${product.condition}</div>
-              <div class="product-name">${product.name}</div>
-              <div class="product-price">${formatRupiah(product.price)}</div>
-              <div class="product-date">Tersedia sejak: ${product.date}</div>
+              <span class="product-condition">Kondisi ${product.condition}</span>
+              <h3 class="product-name">${product.name}</h3>
+              <div class="product-price">${formatPrice(product.price)}</div>
+              <div class="product-date">${product.date}</div>
               <div class="product-action">
-                <button class="btn btn-primary buy-now-btn" data-product-id="${product.id}">Beli Sekarang</button>
-                <button class="btn btn-outline detail-btn" data-product-id="${product.id}">Detail</button>
+                <button class="btn btn-primary detail-btn" data-id="${product.id}">Lihat Detail</button>
+                <button class="btn btn-outline buy-btn" data-id="${product.id}">Beli</button>
               </div>
             </div>
           `;
-          
           productGrid.appendChild(productCard);
         });
         
-        // Tambahkan event listeners untuk tombol detail dan beli
-        addProductButtonListeners();
+        // Add event listeners for buttons after rendering
+        document.querySelectorAll('.detail-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            showProductDetail(parseInt(this.getAttribute('data-id')));
+          });
+        });
         
-        // Update pagination
-        updatePagination(page);
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            showBuyModal(parseInt(this.getAttribute('data-id')));
+          });
+        });
       }
 
-      // Fungsi untuk update pagination
-      function updatePagination(currentPage) {
-        const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-        
-        // Clear pagination
+      // Generate pagination
+      function renderPagination() {
         pagination.innerHTML = '';
         
-        // Tambahkan pagination items
+        const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+        
+        // Previous button
+        if (currentPage > 1) {
+          const prevBtn = document.createElement('div');
+          prevBtn.className = 'pagination-item';
+          prevBtn.innerHTML = '&laquo;';
+          prevBtn.addEventListener('click', () => {
+            currentPage--;
+            renderProducts();
+            renderPagination();
+            window.scrollTo(0, 0);
+          });
+          pagination.appendChild(prevBtn);
+        }
+        
+        // Page numbers
         for (let i = 1; i <= totalPages; i++) {
           const pageItem = document.createElement('div');
-          pageItem.className = 'pagination-item' + (i === currentPage ? ' active' : '');
+          pageItem.className = 'pagination-item';
+          if (i === currentPage) {
+            pageItem.classList.add('active');
+          }
           pageItem.textContent = i;
-          pageItem.dataset.page = i;
+          pageItem.addEventListener('click', () => {
+            currentPage = i;
+            renderProducts();
+            renderPagination();
+            window.scrollTo(0, 0);
+          });
           pagination.appendChild(pageItem);
         }
         
-        // Tambahkan tombol next jika perlu
-        if (totalPages > 1) {
+        // Next button
+        if (currentPage < totalPages) {
           const nextBtn = document.createElement('div');
           nextBtn.className = 'pagination-item';
-          nextBtn.textContent = '>';
-          nextBtn.dataset.page = 'next';
+          nextBtn.innerHTML = '&raquo;';
+          nextBtn.addEventListener('click', () => {
+            currentPage++;
+            renderProducts();
+            renderPagination();
+            window.scrollTo(0, 0);
+          });
           pagination.appendChild(nextBtn);
         }
-        
-        // Tambahkan event listener untuk pagination
-        addPaginationListeners();
       }
 
-      // Fungsi untuk menambahkan event listener pada pagination
-      function addPaginationListeners() {
-        const paginationItems = document.querySelectorAll('.pagination-item');
-        
-        paginationItems.forEach(item => {
-          item.addEventListener('click', () => {
-            if (item.dataset.page === 'next') {
-              if (currentPage < Math.ceil(filteredProducts.length / itemsPerPage)) {
-                currentPage++;
-                displayProducts(currentPage);
-              }
-            } else {
-              currentPage = parseInt(item.dataset.page);
-              displayProducts(currentPage);
-            }
-          });
-        });
-      }
-
-      // Fungsi untuk menambahkan event listener pada tombol produk
-      function addProductButtonListeners() {
-        // Tombol detail
-        const detailButtons = document.querySelectorAll('.detail-btn');
-        detailButtons.forEach(btn => {
-          btn.addEventListener('click', () => {
-            const productId = parseInt(btn.dataset.productId);
-            showProductDetail(productId);
-          });
-        });
-        
-        // Tombol beli sekarang
-        const buyButtons = document.querySelectorAll('.buy-now-btn');
-        buyButtons.forEach(btn => {
-          btn.addEventListener('click', () => {
-            const productId = parseInt(btn.dataset.productId);
-            showBuyNow(productId);
-          });
-        });
-      }
-
-      // Fungsi untuk menampilkan detail produk
+      // Show product detail modal
       function showProductDetail(productId) {
-        currentProduct = products.find(product => product.id === productId);
+        const product = products.find(p => p.id === productId);
+        if (!product) return;
         
-        if (currentProduct) {
-          modalProductName.textContent = currentProduct.name;
-          modalProductPrice.textContent = formatRupiah(currentProduct.price);
-          modalProductDescription.textContent = currentProduct.description;
-          modalProductImage.src = currentProduct.image;
-          
-          detailModal.style.display = 'flex';
-          successMessage.style.display = 'none';
-        }
+        document.getElementById('modal-product-image').src = product.image;
+        document.getElementById('modal-product-name').textContent = product.name;
+        document.getElementById('modal-product-price').textContent = formatPrice(product.price);
+        document.getElementById('modal-product-description').textContent = product.description;
+        
+        detailModal.style.display = 'flex';
       }
 
-      // Fungsi untuk menampilkan modal beli sekarang
-      function showBuyNow(productId) {
-        currentProduct = products.find(product => product.id === productId);
+      // Show buy modal
+      function showBuyModal(productId) {
+        const product = products.find(p => p.id === productId);
+        if (!product) return;
         
-        if (currentProduct) {
-          buyProductName.textContent = currentProduct.name;
-          buyProductPrice.textContent = formatRupiah(currentProduct.price);
-          
-          buyModal.style.display = 'flex';
-          buySuccessMessage.style.display = 'none';
-        }
+        document.getElementById('buy-product-name').textContent = product.name;
+        document.getElementById('buy-product-price').textContent = formatPrice(product.price);
+        
+        buyModal.style.display = 'flex';
+        
+        // Reset success message
+        buySuccessMessage.style.display = 'none';
       }
 
-      // Fungsi untuk melakukan filtering produk
+      // Apply filters
       function applyFilters() {
-        // Get filter values
+        // Category filters
         const elektronikChecked = document.getElementById('elektronik').checked;
         const otomotifChecked = document.getElementById('otomotif').checked;
         const hobiChecked = document.getElementById('hobi').checked;
         const fashionChecked = document.getElementById('fashion').checked;
         const furnitureChecked = document.getElementById('furniture').checked;
         
+        // Condition filters
         const kondisiAChecked = document.getElementById('kondisiA').checked;
         const kondisiBChecked = document.getElementById('kondisiB').checked;
         const kondisiCChecked = document.getElementById('kondisiC').checked;
         
-        const priceMin = parseInt(document.getElementById('price-min').value) || 0;
-        const priceMax = parseInt(document.getElementById('price-max').value) || Number.MAX_SAFE_INTEGER;
+        // Price range
+        const minPrice = document.getElementById('price-min').value ? parseInt(document.getElementById('price-min').value) : 0;
+        const maxPrice = document.getElementById('price-max').value ? parseInt(document.getElementById('price-max').value) : Number.MAX_SAFE_INTEGER;
         
         // Filter products
         filteredProducts = products.filter(product => {
-          // Filter by category
-          const categoryMatch = 
+          // Category filters
+          const categoryMatch = (
             (product.category === 'elektronik' && elektronikChecked) ||
             (product.category === 'otomotif' && otomotifChecked) ||
             (product.category === 'hobi' && hobiChecked) ||
             (product.category === 'fashion' && fashionChecked) ||
-            (product.category === 'furniture' && furnitureChecked);
+            (product.category === 'furniture' && furnitureChecked)
+          );
           
-          // Filter by condition
-          const conditionMatch = 
+          // Condition filters
+          const conditionMatch = (
             (product.condition === 'A' && kondisiAChecked) ||
             (product.condition === 'B' && kondisiBChecked) ||
-            (product.condition === 'C' && kondisiCChecked);
+            (product.condition === 'C' && kondisiCChecked)
+          );
           
-          // Filter by price
-          const priceMatch = product.price >= priceMin && product.price <= priceMax;
+          // Price range
+          const priceMatch = product.price >= minPrice && product.price <= maxPrice;
           
           return categoryMatch && conditionMatch && priceMatch;
         });
         
-        // Reset page to 1 and display products
+        // Search filter
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        if (searchTerm) {
+          filteredProducts = filteredProducts.filter(product => 
+            product.name.toLowerCase().includes(searchTerm) || 
+            product.description.toLowerCase().includes(searchTerm)
+          );
+        }
+        
+        // Apply sorting
+        applySorting();
+        
+        // Reset to first page
         currentPage = 1;
-        displayProducts(currentPage);
+        
+        // Render products and pagination
+        renderProducts();
+        renderPagination();
       }
 
-      // Fungsi untuk sorting produk
-      function sortProducts() {
-        const sortType = document.getElementById('sort-select').value;
+      // Apply sorting
+      function applySorting() {
+        const sortValue = sortSelect.value;
         
-        switch (sortType) {
+        switch (sortValue) {
           case 'latest':
-            // Sort by date (in this simplified version, using product ID as a proxy for date)
-            filteredProducts.sort((a, b) => b.id - a.id);
+            // Sort by date (newest first)
+            filteredProducts.sort((a, b) => {
+              const dateA = new Date(a.date.split(' ').reverse().join(' '));
+              const dateB = new Date(b.date.split(' ').reverse().join(' '));
+              return dateB - dateA;
+            });
             break;
           case 'price-low':
+            // Sort by price (lowest first)
             filteredProducts.sort((a, b) => a.price - b.price);
             break;
           case 'price-high':
+            // Sort by price (highest first)
             filteredProducts.sort((a, b) => b.price - a.price);
             break;
           case 'rating':
-            // In a real app, you would sort by rating
-            // Here we just use a random sort for demonstration
-            filteredProducts.sort(() => Math.random() - 0.5);
+            // Sort by condition (A first, then B, then C)
+            filteredProducts.sort((a, b) => {
+              if (a.condition === b.condition) return 0;
+              if (a.condition === 'A') return -1;
+              if (b.condition === 'A') return 1;
+              if (a.condition === 'B') return -1;
+              return 1;
+            });
             break;
         }
-        
-        // Reset page to 1 and display products
-        currentPage = 1;
-        displayProducts(currentPage);
       }
 
-      // Fungsi untuk pencarian produk
-      function searchProducts() {
-        const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      // Event listeners
+      window.addEventListener('DOMContentLoaded', () => {
+        // Initial render
+        renderProducts();
+        renderPagination();
         
-        if (searchTerm.trim() !== '') {
-          filteredProducts = products.filter(product => 
-            product.name.toLowerCase().includes(searchTerm) ||
-            product.description.toLowerCase().includes(searchTerm)
-          );
-        } else {
-          filteredProducts = [...products];
-        }
-        
-        // Reset page to 1 and display products
-        currentPage = 1;
-        displayProducts(currentPage);
-      }
-
-      // Event Listeners
-      
-      // Close modals
-      closeModal.addEventListener('click', () => {
-        detailModal.style.display = 'none';
-      });
-      
-      closeBuyModal.addEventListener('click', () => {
-        buyModal.style.display = 'none';
-      });
-      
-      modalCloseBtn.addEventListener('click', () => {
-        detailModal.style.display = 'none';
-      });
-      
-      cancelBuyBtn.addEventListener('click', () => {
-        buyModal.style.display = 'none';
-      });
-      
-      // Buy from detail modal
-      modalBuyBtn.addEventListener('click', () => {
-        if (currentProduct) {
-          successMessage.style.display = 'block';
-          setTimeout(() => {
-            detailModal.style.display = 'none';
-          }, 2000);
-        }
-      });
-      
-      // Confirm buy
-      confirmBuyBtn.addEventListener('click', () => {
-        if (currentProduct) {
-          buySuccessMessage.style.display = 'block';
-          setTimeout(() => {
-            buyModal.style.display = 'none';
-          }, 2000);
-        }
-      });
-      
-      // Filter and sort
-      document.getElementById('apply-filter').addEventListener('click', applyFilters);
-      document.getElementById('sort-select').addEventListener('change', sortProducts);
-      document.getElementById('search-button').addEventListener('click', searchProducts);
-      document.getElementById('search-input').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-          searchProducts();
-        }
-      });
-      
-      // Close modals when clicking outside
-      window.addEventListener('click', (e) => {
-        if (e.target === detailModal) {
+        // Close detail modal
+        closeModal.addEventListener('click', () => {
           detailModal.style.display = 'none';
-        }
-        if (e.target === buyModal) {
+        });
+        
+        modalCloseBtn.addEventListener('click', () => {
+          detailModal.style.display = 'none';
+        });
+        
+        // Close buy modal
+        closeBuyModal.addEventListener('click', () => {
           buyModal.style.display = 'none';
-        }
+        });
+        
+        cancelBuyBtn.addEventListener('click', () => {
+          buyModal.style.display = 'none';
+        });
+        
+        // Handle modal clicks (close when clicking outside)
+        window.addEventListener('click', (event) => {
+          if (event.target === detailModal) {
+            detailModal.style.display = 'none';
+          }
+          if (event.target === buyModal) {
+            buyModal.style.display = 'none';
+          }
+        });
+        
+        // Buy button in detail modal
+        modalBuyBtn.addEventListener('click', () => {
+          // Show success message
+          successMessage.style.display = 'block';
+          
+          // Hide success message after 3 seconds
+          setTimeout(() => {
+            successMessage.style.display = 'none';
+          }, 3000);
+        });
+        
+        // Confirm buy button
+        confirmBuyBtn.addEventListener('click', () => {
+          // Show success message
+          buySuccessMessage.style.display = 'block';
+          
+          // Hide success message and close modal after 3 seconds
+          setTimeout(() => {
+            buySuccessMessage.style.display = 'none';
+            buyModal.style.display = 'none';
+          }, 3000);
+        });
+        
+        // Apply filter button
+        applyFilterBtn.addEventListener('click', applyFilters);
+        
+        // Search button
+        searchButton.addEventListener('click', applyFilters);
+        
+        // Search on Enter key
+        searchInput.addEventListener('keyup', (event) => {
+          if (event.key === 'Enter') {
+            applyFilters();
+          }
+        });
+        
+        // Sort select
+        sortSelect.addEventListener('change', () => {
+          applySorting();
+          renderProducts();
+        });
       });
-
-      // Initialize
-      displayProducts(currentPage);
     </script>
   </body>
 </html>
