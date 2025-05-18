@@ -41,13 +41,13 @@ Macam - macam tag khusus :
 
 karena website ini merupakan sebuah design, kami membangun tampilan web yang bekerja untuk **client-side** atau hanya bekerja untuk browser komputer dan tidak dengan bagian server.
 
-![gambar jenis pemrograman web](https://www.bing.com/images/search?view=detailV2&ccid=5HWxFYaR&id=397E921BA83337DDB5F8BCD5E199A89947EA2469&thid=OIP.5HWxFYaR5eZI64J9nrrtNgAAAA&mediaurl=https%3a%2f%2fwww.infanthree.com%2fwp-content%2fuploads%2f2018%2f01%2fPerbedaan-Client-side-dan-Server-side-Web-Programming.jpg&exph=236&expw=320&q=client-side+program&simid=608004895818788632&FORM=IRPRST&ck=B613F9CDAA0515D96D618655496A7823&selectedIndex=8&itb=0)
+![gambar jenis pemrograman web](https://cdn-gkgmn.nitrocdn.com/HxDrMqgpfrfMwMIyqdIclnyVmQsPpBQI/assets/images/optimized/rev-09c4bbc/www.techwebspace.com/wp-content/uploads/2018/10/Server-Side-vs-Client-Side-Programming-795x385.png)
 
 <hr>
 
-# [Cara Melihat website](www.jarkom.site)
+# [Cara Melihat website](https://www.jarkom.site)
 > github dapat menggantikan server hosting namun hanya untuk website statis.  
 <br>
 
 klik judul :
-```Cara melihat website``` untuk melihat halaman website secara online atau ketik di kolom pencarian www.jarkom.site
+```Cara melihat website``` untuk melihat halaman website secara online atau ketik di kolom pencarian https://www.jarkom.site
