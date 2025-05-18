@@ -3,9 +3,9 @@
 
 untuk memenuhi tugas desain web, kami kelompok 5 yang beranggotakan :
 
-* Ibnu Rizal Khoirru Rokhim
-* Haidar Ahadya Almansyuri
-* Jovanda Kelvin
+* Ibnu Rizal Khoirru Rokhim [@IbnoeRizal](https://github.com/IbnoeRizal)
+* Haidar Ahadya Al-mansuri [@hydarlm](https://github.com/hydarlm)
+* Jovanda Kelvin [@jovandAa](https://github.com/jovandAa)
 
 
 mendesain halaman website dengan menggunakan [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),dan [Javascript](https://www.javascripttutorial.net/) dengan metode embeded, yaitu metode penulisan langsung pada tag khusus HTML
@@ -45,9 +45,8 @@ karena website ini merupakan sebuah design, kami membangun tampilan web yang bek
 
 <hr>
 
-# [Cara Melihat website](https://www.jarkom.site)
+# Cara Melihat website
 > github dapat menggantikan server hosting namun hanya untuk website statis.  
 <br>
 
-klik judul :
-```Cara melihat website``` untuk melihat halaman website secara online atau ketik di kolom pencarian https://www.jarkom.site
+klik **https://www.jarkom.site** untuk melihat halaman website secara online  
