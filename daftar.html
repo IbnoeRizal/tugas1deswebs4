@@ -8,769 +8,534 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS for brand colors and specific styling -->
     <style>
+      :root {
+        --primary-color: #34b67a;
+        --secondary-color: #2a9d8f;
+        --accent-color: #ffd166;
+        --dark-color: #264653;
+      }
+
       * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
       }
 
       body {
         background-color: #f7f9fc;
-        color: #333;
-        line-height: 1.6;
       }
 
-      .header {
-        background: linear-gradient(135deg, #34b67a, #2a9d8f);
-        color: white;
-        padding: 1.5rem 0;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      }
+      .header-custom {
+            background: linear-gradient(135deg, #34b67a, #2a9d8f);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
 
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-      }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+        }
 
-      .logo {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: white;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-      }
+        .logo span {
+            color: #ffd166;
+        }
 
-      .logo span {
-        color: #ffd166;
-      }
+        .navbar-custom {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
 
-      .navbar {
-        background-color: white;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-      }
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            padding: 1rem 1.5rem !important;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
 
-      .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-      }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #34b67a !important;
+            border-bottom: 3px solid #34b67a;
+            background-color: #eefff7;
+        }
 
-      .nav-list {
-        display: flex;
-        list-style: none;
-        padding: 0;
-      }
-
-      .nav-list li {
-        margin: 0;
-      }
-
-      .nav-list a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        padding: 1rem 1.5rem;
-        font-weight: 500;
+      .btn-primary-custom {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border: none;
         transition: all 0.3s ease;
-        border-bottom: 3px solid transparent;
       }
 
-      .nav-list a:hover,
-      .nav-list a.active {
-        color: #34b67a;
-        border-bottom: 3px solid #34b67a;
+      .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
+        background: linear-gradient(135deg, #2a9d66, #238073);
       }
 
-      .nav-list a.active {
-        background-color: #eefff7;
+      .text-primary-custom {
+        color: var(--secondary-color) !important;
       }
 
-      .container {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 2rem;
-        display: flex;
-      }
-
-      .sidebar-info {
-        flex: 0 0 25%;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        padding: 1.5rem;
-        margin-right: 2rem;
-      }
-
-      .sidebar-title {
-        color: #2a9d8f;
-        margin-bottom: 1.2rem;
-        font-size: 1.2rem;
-        position: relative;
-        padding-bottom: 0.5rem;
-      }
-
-      .sidebar-title:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 40px;
-        height: 3px;
-        background: #ffd166;
-      }
-
-      .benefit-list {
-        list-style: none;
-        margin: 1.5rem 0;
-      }
-
-      .benefit-item {
-        display: flex;
-        margin-bottom: 0.8rem;
-        align-items: flex-start;
+      .border-accent {
+        border-left: 4px solid var(--accent-color) !important;
       }
 
       .benefit-icon {
-        color: #34b67a;
+        color: var(--primary-color);
         font-weight: bold;
-        margin-right: 0.5rem;
       }
 
-      .testimonial {
+      .testimonial-bg {
         background: #f0f7f4;
-        border-radius: 8px;
-        padding: 1rem;
-        margin-top: 1.5rem;
       }
 
-      .testimonial-content {
-        font-style: italic;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+      .accordion-button:not(.collapsed) {
+        background-color: #eefff7;
+        color: var(--secondary-color);
       }
 
-      .testimonial-author {
-        font-weight: 600;
-        font-size: 0.85rem;
-        text-align: right;
+      .accordion-button:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(52, 182, 122, 0.25);
       }
 
-      .content {
-        flex: 1;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(52, 182, 122, 0.25);
       }
 
-      .content-title {
-        color: #2a9d8f;
-        margin-bottom: 1.2rem;
-        font-size: 1.8rem;
-        position: relative;
-        padding-bottom: 0.5rem;
+      .footer-bg {
+        background: var(--dark-color);
       }
 
-      .content-title:after {
+      .underline-accent::after {
         content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
+        display: block;
         width: 60px;
         height: 3px;
-        background: #ffd166;
+        background: var(--accent-color);
+        margin-top: 0.5rem;
       }
 
-      .regional-notice {
-        background-color: #f8f9fa;
-        border-left: 4px solid #ffd166;
-        padding: 1rem;
-        margin-bottom: 2rem;
-        border-radius: 4px;
-      }
-
-      .regional-notice h3 {
-        color: #2a9d8f;
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .regional-notice p {
-        font-size: 0.9rem;
-      }
-
-      .section-title {
-        color: #2a9d8f;
-        margin: 1.5rem 0 1rem;
-        font-size: 1.3rem;
-      }
-
-      .registration-form {
-        margin-top: 1rem;
-      }
-
-      .form-group {
-        margin-bottom: 1rem;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-      }
-
-      .form-control {
-        width: 100%;
-        padding: 0.8rem;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 1rem;
-      }
-
-      .form-check {
-        display: flex;
-        align-items: center;
-      }
-
-      .form-check-input {
-        margin-right: 0.5rem;
-      }
-
-      .btn {
-        display: inline-block;
-        font-weight: 500;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid transparent;
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-        line-height: 1.5;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, #34b67a, #2a9d8f);
-        color: white;
-        box-shadow: 0 4px 10px rgba(42, 157, 143, 0.2);
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
-      }
-
-      .btn-register {
-        width: 100%;
-        margin-top: 1rem;
-      }
-
-      .alternative-login {
-        margin-top: 2rem;
-      }
-
-      .divider {
-        display: flex;
-        align-items: center;
-        margin: 1rem 0;
-      }
-
-      .divider::before,
-      .divider::after {
+      .underline-accent-small::after {
         content: '';
-        flex: 1;
-        border-bottom: 1px solid #ddd;
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: var(--accent-color);
+        margin-top: 0.5rem;
       }
 
-      .divider span {
-        padding: 0 10px;
-        color: #777;
-        font-size: 0.9rem;
+      .error-message {
+        color: #dc3545;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: none;
       }
 
-      .social-login {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .btn-social {
-        flex: 1;
+      .social-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0.5rem;
-        background-color: #f8f9fa;
-        border: 1px solid #ddd;
-        color: #333;
+        gap: 0.5rem;
       }
 
-      .btn-social img {
+      .social-btn img {
         height: 20px;
-        margin-right: 0.5rem;
-      }
-
-      .btn-google {
-        color: #ea4335;
-      }
-
-      .btn-facebook {
-        color: #3b5998;
-      }
-
-      .login-link {
-        text-align: center;
-        margin-top: 1.5rem;
-        font-size: 0.9rem;
-      }
-
-      .login-link a {
-        color: #2a9d8f;
-        text-decoration: none;
-        font-weight: 500;
-      }
-
-      .faq-section {
-        margin-top: 2rem;
-      }
-
-      .accordion {
-        margin: 1.5rem 0;
-      }
-
-      .accordion-item {
-        background: #fff;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        overflow: hidden;
-      }
-
-      .accordion-header {
-        background: #f9f9f9;
-        padding: 1rem 1.5rem;
-        font-weight: 600;
-        color: #333;
-        cursor: pointer;
-        position: relative;
-        transition: all 0.3s ease;
-      }
-
-      .accordion-header:hover {
-        background: #eefff7;
-        color: #2a9d8f;
-      }
-
-      .accordion-header:after {
-        content: '+';
-        position: absolute;
-        right: 1.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.5rem;
-        color: #2a9d8f;
-      }
-
-      .accordion-item.active .accordion-header:after {
-        content: '-';
-      }
-
-      .accordion-content {
-        padding: 0 1.5rem;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        background: white;
-      }
-
-      .accordion-item.active .accordion-content {
-        padding: 1rem 1.5rem;
-        max-height: 500px;
-      }
-
-      .footer {
-        background: #264653;
-        color: white;
-        padding: 2rem 0;
-        text-align: center;
-        margin-top: 3rem;
-      }
-
-      /* Responsif untuk mobile */
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .sidebar-info {
-          margin-right: 0;
-          margin-bottom: 1.5rem;
-          width: 100%;
-        }
-
-        .social-login {
-          flex-direction: column;
-        }
-
-        .btn-social {
-          margin: 0.5rem 0;
-        }
       }
     </style>
   </head>
   <body>
-    <header class="header">
-      <div class="header-content">
-        <a href="index.html" class="logo">Berkah<span>Seken</span></a>
+    <!-- Header -->
+    <header class="header-custom text-white py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-center">
+              <a href="index.html" class="logo text-decoration-none"> Berkah<span>Seken</span> </a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <nav class="navbar">
-      <div class="nav-container">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="KatalogBarang.html">Katalog Barang</a></li>
-          <li><a href="CaraDaftar.html">Cara Daftar</a></li>
-          <li><a href="#" class="active">Daftar</a></li>
-          <li><a href="kontak.html">Kontak</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="KatalogBarang.html">Katalog Barang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="CaraDaftar.html">Cara Daftar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Daftar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="sidebar-info">
-        <h3 class="sidebar-title">Keuntungan Menjadi Member</h3>
-        <ul class="benefit-list">
-          <li class="benefit-item">
-            <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Akses ke semua barang seken</div>
-          </li>
-          <li class="benefit-item">
-            <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Fitur chat langsung dengan penjual</div>
-          </li>
-          <li class="benefit-item">
-            <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Notifikasi barang baru sesuai wishlist</div>
-          </li>
-          <li class="benefit-item">
-            <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Diskon untuk member setia</div>
-          </li>
-          <li class="benefit-item">
-            <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Jaminan barang sesuai deskripsi</div>
-          </li>
-        </ul>
+    <!-- Main Content -->
+    <div class="container my-4">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="text-primary-custom underline-accent-small">Keuntungan Menjadi Member</h5>
 
-        <div class="testimonial">
-          <div class="testimonial-content">"Saya sudah belanja 5x di BerkahSeken dan selalu puas dengan kondisi barangnya. Proses verifikasinya sangat ketat!"</div>
-          <div class="testimonial-author">- Ahmad, Jakarta</div>
-        </div>
-      </div>
+              <ul class="list-unstyled mt-4">
+                <li class="d-flex align-items-start mb-3">
+                  <span class="benefit-icon me-2">✓</span>
+                  <span>Akses ke semua barang seken</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <span class="benefit-icon me-2">✓</span>
+                  <span>Fitur chat langsung dengan penjual</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <span class="benefit-icon me-2">✓</span>
+                  <span>Notifikasi barang baru sesuai wishlist</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <span class="benefit-icon me-2">✓</span>
+                  <span>Diskon untuk member setia</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <span class="benefit-icon me-2">✓</span>
+                  <span>Jaminan barang sesuai deskripsi</span>
+                </li>
+              </ul>
 
-      <div class="content">
-        <h2 class="content-title">Daftar di BerkahSeken</h2>
-        <div class="regional-notice">
-          <h3>Perhatian: Layanan BerkahSeken saat ini hanya tersedia di kota-kota besar di Indonesia</h3>
-          <p>Jabodetabek, Bandung, Surabaya, Medan, Makassar, Semarang, Yogyakarta, Bali, Batam, dan Palembang. Kami akan segera memperluas layanan ke kota-kota lainnya.</p>
-        </div>
-
-        <div class="registration-form-section">
-          <h3 class="section-title">Daftar Sekarang</h3>
-
-          <div class="registration-form">
-            <div class="form-group">
-              <label for="fullname">Nama Lengkap</label>
-              <input type="text" id="fullname" class="form-control" placeholder="Masukkan nama lengkap" />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Masukkan email" />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Nomor Telepon</label>
-              <input type="tel" id="phone" class="form-control" placeholder="Masukkan nomor telepon" />
-            </div>
-
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" class="form-control" placeholder="Buat password (min. 8 karakter)" />
-            </div>
-
-            <div class="form-group">
-              <label for="confirm-password">Konfirmasi Password</label>
-              <input type="password" id="confirm-password" class="form-control" placeholder="Konfirmasi password" />
-            </div>
-
-            <div class="form-group form-check">
-              <input type="checkbox" id="terms" class="form-check-input" />
-              <label for="terms" class="form-check-label">Saya setuju dengan <a href="#">Syarat & Ketentuan</a> BerkahSeken</label>
-            </div>
-
-            <button class="btn btn-primary btn-register">Daftar Sekarang</button>
-
-            <div class="alternative-login">
-              <div class="divider">
-                <span>Atau daftar dengan</span>
-              </div>
-
-              <div class="social-login">
-                <button class="btn btn-social btn-google"><img src="img/google.png" alt="Google" /> Google</button>
-                <button class="btn btn-social btn-facebook"><img src="img/facebook.png" alt="Facebook" /> Facebook</button>
+              <div class="testimonial-bg rounded p-3 mt-4">
+                <p class="fst-italic mb-2 small">"Saya sudah belanja 5x di BerkahSeken dan selalu puas dengan kondisi barangnya. Proses verifikasinya sangat ketat!"</p>
+                <p class="fw-semibold small text-end mb-0">- Ahmad, Jakarta</p>
               </div>
             </div>
           </div>
-
-          <div class="login-link">Sudah punya akun? <a href="#">Masuk di sini</a></div>
         </div>
 
-        <div class="faq-section">
-          <h3 class="section-title">Pertanyaan Umum</h3>
+        <!-- Main Content -->
+        <div class="col-lg-9">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h2 class="text-primary-custom underline-accent">Daftar di BerkahSeken</h2>
 
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-header">Apa syarat untuk menjadi member BerkahSeken?</div>
-            </div>
+              <!-- Regional Notice -->
+              <div class="alert alert-warning border-accent mt-4">
+                <h6 class="text-primary-custom">Perhatian: Layanan BerkahSeken saat ini hanya tersedia di kota-kota besar di Indonesia</h6>
+                <p class="mb-0 small">Jabodetabek, Bandung, Surabaya, Medan, Makassar, Semarang, Yogyakarta, Bali, Batam, dan Palembang. Kami akan segera memperluas layanan ke kota-kota lainnya.</p>
+              </div>
 
-            <div class="accordion-item">
-              <div class="accordion-header">Apakah pendaftaran dikenakan biaya?</div>
-            </div>
+              <!-- Registration Form -->
+              <h4 class="text-primary-custom mt-4 mb-3">Daftar Sekarang</h4>
 
-            <div class="accordion-item">
-              <div class="accordion-header">Berapa lama proses verifikasi akun?</div>
-            </div>
+              <form class="registration-form">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="fullname" class="form-label fw-medium">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="Masukkan nama lengkap" />
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label fw-medium">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email" />
+                    <div class="error-message"></div>
+                  </div>
+                </div>
 
-            <div class="accordion-item">
-              <div class="accordion-header">Bagaimana jika saya lupa password?</div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label fw-medium">Nomor Telepon</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Masukkan nomor telepon" />
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="password" class="form-label fw-medium">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Buat password (min. 8 karakter)" />
+                    <div class="error-message"></div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="confirm-password" class="form-label fw-medium">Konfirmasi Password</label>
+                  <input type="password" class="form-control" id="confirm-password" placeholder="Konfirmasi password" />
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="terms" />
+                  <label class="form-check-label" for="terms"> Saya setuju dengan <a href="#" class="text-decoration-none">Syarat & Ketentuan</a> BerkahSeken </label>
+                </div>
+
+                <button type="button" class="btn btn-primary-custom btn-lg w-100 mb-4">Daftar Sekarang</button>
+
+                <!-- Social Login -->
+                <div class="text-center">
+                  <div class="position-relative mb-3">
+                    <hr />
+                    <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small">Atau daftar dengan</span>
+                  </div>
+
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 social-btn">
+                        <img src="img/google.png" alt="Google" />
+                        Google
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 social-btn">
+                        <img src="img/facebook.png" alt="Facebook" />
+                        Facebook
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center mt-3">
+                  <small>Sudah punya akun? <a href="#" class="text-decoration-none text-primary-custom fw-medium">Masuk di sini</a></small>
+                </div>
+              </form>
+
+              <!-- FAQ Section -->
+              <h4 class="text-primary-custom mt-5 mb-3">Pertanyaan Umum</h4>
+
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Apa syarat untuk menjadi member BerkahSeken?</button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Untuk menjadi member BerkahSeken, Anda harus berusia minimal 17 tahun, memiliki email yang valid, nomor telepon aktif, dan berdomisili di kota yang kami layani. Kami juga akan melakukan verifikasi identitas untuk
+                      keamanan komunitas kami.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Apakah pendaftaran dikenakan biaya?</button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Tidak, pendaftaran di BerkahSeken 100% gratis. Kami tidak memungut biaya apapun untuk registrasi akun atau penggunaan layanan dasar kami.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Berapa lama proses verifikasi akun?</button>
+                  </h2>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Proses verifikasi akun umumnya membutuhkan waktu 1-24 jam kerja. Pada jam sibuk atau akhir pekan, proses mungkin sedikit lebih lama. Anda akan mendapatkan email konfirmasi setelah akun Anda terverifikasi.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Bagaimana jika saya lupa password?</button>
+                  </h2>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Jika Anda lupa password, klik tombol 'Masuk' lalu pilih opsi 'Lupa Password'. Kami akan mengirimkan link reset password ke email terdaftar Anda. Link tersebut berlaku selama 1 jam.</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="footer-content">© 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</div>
+    <!-- Footer -->
+    <footer class="footer-bg text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-0">© 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</p>
+      </div>
     </footer>
-  </body>
 
-  <script>
-    // Form validation
-    document.addEventListener('DOMContentLoaded', function () {
-      const form = document.querySelector('.registration-form');
-      const fullnameInput = document.getElementById('fullname');
-      const emailInput = document.getElementById('email');
-      const phoneInput = document.getElementById('phone');
-      const passwordInput = document.getElementById('password');
-      const confirmPasswordInput = document.getElementById('confirm-password');
-      const termsCheckbox = document.getElementById('terms');
-      const registerButton = document.querySelector('.btn-register');
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-      // Menambahkan div untuk pesan error pada setiap form group
-      const formGroups = document.querySelectorAll('.form-group');
-      formGroups.forEach((group) => {
-        if (!group.classList.contains('form-check')) {
-          const errorDiv = document.createElement('div');
-          errorDiv.className = 'error-message';
-          errorDiv.style.color = '#e74c3c';
-          errorDiv.style.fontSize = '0.8rem';
-          errorDiv.style.marginTop = '0.3rem';
-          errorDiv.style.display = 'none';
-          group.appendChild(errorDiv);
+    <!-- Custom JavaScript for form validation -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const fullnameInput = document.getElementById('fullname');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const termsCheckbox = document.getElementById('terms');
+        const registerButton = document.querySelector('.btn-primary-custom');
+
+        // Function to show error
+        function showError(input, message) {
+          const errorDiv = input.parentElement.querySelector('.error-message');
+          errorDiv.textContent = message;
+          errorDiv.style.display = 'block';
+          input.classList.add('is-invalid');
         }
-      });
 
-      // Fungsi untuk menampilkan error
-      function showError(input, message) {
-        const formGroup = input.parentElement;
-        const errorDiv = formGroup.querySelector('.error-message');
-        errorDiv.textContent = message;
-        errorDiv.style.display = 'block';
-        input.style.borderColor = '#e74c3c';
-      }
-
-      // Fungsi untuk menghapus error
-      function clearError(input) {
-        const formGroup = input.parentElement;
-        const errorDiv = formGroup.querySelector('.error-message');
-        if (errorDiv) {
+        // Function to clear error
+        function clearError(input) {
+          const errorDiv = input.parentElement.querySelector('.error-message');
           errorDiv.textContent = '';
           errorDiv.style.display = 'none';
+          input.classList.remove('is-invalid');
+          input.classList.add('is-valid');
         }
-        input.style.borderColor = '#ddd';
-      }
 
-      // Validasi nama
-      function validateFullname() {
-        if (fullnameInput.value.trim() === '') {
-          showError(fullnameInput, 'Nama lengkap tidak boleh kosong');
-          return false;
-        } else if (fullnameInput.value.trim().length < 3) {
-          showError(fullnameInput, 'Nama lengkap minimal 3 karakter');
-          return false;
-        } else {
-          clearError(fullnameInput);
-          return true;
-        }
-      }
-
-      // Validasi email
-      function validateEmail() {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (emailInput.value.trim() === '') {
-          showError(emailInput, 'Email tidak boleh kosong');
-          return false;
-        } else if (!emailRegex.test(emailInput.value.trim())) {
-          showError(emailInput, 'Format email tidak valid');
-          return false;
-        } else {
-          clearError(emailInput);
-          return true;
-        }
-      }
-
-      // Validasi nomor telepon
-      function validatePhone() {
-        const phoneRegex = /^(\+62|62|0)[0-9]{9,12}$/;
-        if (phoneInput.value.trim() === '') {
-          showError(phoneInput, 'Nomor telepon tidak boleh kosong');
-          return false;
-        } else if (!phoneRegex.test(phoneInput.value.trim())) {
-          showError(phoneInput, 'Format nomor telepon tidak valid (gunakan format Indonesia)');
-          return false;
-        } else {
-          clearError(phoneInput);
-          return true;
-        }
-      }
-
-      // Validasi password
-      function validatePassword() {
-        if (passwordInput.value === '') {
-          showError(passwordInput, 'Password tidak boleh kosong');
-          return false;
-        } else if (passwordInput.value.length < 8) {
-          showError(passwordInput, 'Password minimal 8 karakter');
-          return false;
-        } else if (!/[A-Z]/.test(passwordInput.value)) {
-          showError(passwordInput, 'Password harus mengandung minimal 1 huruf kapital');
-          return false;
-        } else if (!/[0-9]/.test(passwordInput.value)) {
-          showError(passwordInput, 'Password harus mengandung minimal 1 angka');
-          return false;
-        } else {
-          clearError(passwordInput);
-          return true;
-        }
-      }
-
-      // Validasi konfirmasi password
-      function validateConfirmPassword() {
-        if (confirmPasswordInput.value === '') {
-          showError(confirmPasswordInput, 'Konfirmasi password tidak boleh kosong');
-          return false;
-        } else if (confirmPasswordInput.value !== passwordInput.value) {
-          showError(confirmPasswordInput, 'Password tidak cocok');
-          return false;
-        } else {
-          clearError(confirmPasswordInput);
-          return true;
-        }
-      }
-
-      // Validasi terms
-      function validateTerms() {
-        if (!termsCheckbox.checked) {
-          termsCheckbox.style.outline = '1px solid #e74c3c';
-          return false;
-        } else {
-          termsCheckbox.style.outline = 'none';
-          return true;
-        }
-      }
-
-      // Event listener untuk input fields
-      fullnameInput.addEventListener('input', validateFullname);
-      emailInput.addEventListener('input', validateEmail);
-      phoneInput.addEventListener('input', validatePhone);
-      passwordInput.addEventListener('input', validatePassword);
-      confirmPasswordInput.addEventListener('input', validateConfirmPassword);
-      termsCheckbox.addEventListener('change', validateTerms);
-
-      // Event listener untuk submit form
-      registerButton.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        // Validasi semua field
-        const isFullnameValid = validateFullname();
-        const isEmailValid = validateEmail();
-        const isPhoneValid = validatePhone();
-        const isPasswordValid = validatePassword();
-        const isConfirmPasswordValid = validateConfirmPassword();
-        const isTermsChecked = validateTerms();
-
-        // Jika semua valid, proses form
-        if (isFullnameValid && isEmailValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid && isTermsChecked) {
-          // Simulasi pengiriman form
-          alert('Pendaftaran berhasil! Silakan cek email Anda untuk verifikasi.');
-          // Reset form setelah berhasil
-          form.reset();
-        } else {
-          // Scroll ke error pertama
-          const firstError = document.querySelector('.error-message[style="display: block"]');
-          if (firstError) {
-            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Validation functions
+        function validateFullname() {
+          if (fullnameInput.value.trim() === '') {
+            showError(fullnameInput, 'Nama lengkap tidak boleh kosong');
+            return false;
+          } else if (fullnameInput.value.trim().length < 3) {
+            showError(fullnameInput, 'Nama lengkap minimal 3 karakter');
+            return false;
+          } else {
+            clearError(fullnameInput);
+            return true;
           }
         }
-      });
 
-      // FAQ Accordion Functionality
-      const accordionItems = document.querySelectorAll('.accordion-item');
+        function validateEmail() {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (emailInput.value.trim() === '') {
+            showError(emailInput, 'Email tidak boleh kosong');
+            return false;
+          } else if (!emailRegex.test(emailInput.value.trim())) {
+            showError(emailInput, 'Format email tidak valid');
+            return false;
+          } else {
+            clearError(emailInput);
+            return true;
+          }
+        }
 
-      // Menambahkan konten FAQ yang tersembunyi
-      const faqContents = [
-        'Untuk menjadi member BerkahSeken, Anda harus berusia minimal 17 tahun, memiliki email yang valid, nomor telepon aktif, dan berdomisili di kota yang kami layani. Kami juga akan melakukan verifikasi identitas untuk keamanan komunitas kami.',
-        'Tidak, pendaftaran di BerkahSeken 100% gratis. Kami tidak memungut biaya apapun untuk registrasi akun atau penggunaan layanan dasar kami.',
-        'Proses verifikasi akun umumnya membutuhkan waktu 1-24 jam kerja. Pada jam sibuk atau akhir pekan, proses mungkin sedikit lebih lama. Anda akan mendapatkan email konfirmasi setelah akun Anda terverifikasi.',
-        "Jika Anda lupa password, klik tombol 'Masuk' lalu pilih opsi 'Lupa Password'. Kami akan mengirimkan link reset password ke email terdaftar Anda. Link tersebut berlaku selama 1 jam.",
-      ];
+        function validatePhone() {
+          const phoneRegex = /^(\+62|62|0)[0-9]{9,12}$/;
+          if (phoneInput.value.trim() === '') {
+            showError(phoneInput, 'Nomor telepon tidak boleh kosong');
+            return false;
+          } else if (!phoneRegex.test(phoneInput.value.trim())) {
+            showError(phoneInput, 'Format nomor telepon tidak valid (gunakan format Indonesia)');
+            return false;
+          } else {
+            clearError(phoneInput);
+            return true;
+          }
+        }
 
-      // Tambahkan div konten untuk setiap item accordion
-      accordionItems.forEach((item, index) => {
-        const content = document.createElement('div');
-        content.className = 'accordion-content';
-        content.innerHTML = `<p>${faqContents[index]}</p>`;
-        item.appendChild(content);
-      });
+        function validatePassword() {
+          if (passwordInput.value === '') {
+            showError(passwordInput, 'Password tidak boleh kosong');
+            return false;
+          } else if (passwordInput.value.length < 8) {
+            showError(passwordInput, 'Password minimal 8 karakter');
+            return false;
+          } else if (!/[A-Z]/.test(passwordInput.value)) {
+            showError(passwordInput, 'Password harus mengandung minimal 1 huruf kapital');
+            return false;
+          } else if (!/[0-9]/.test(passwordInput.value)) {
+            showError(passwordInput, 'Password harus mengandung minimal 1 angka');
+            return false;
+          } else {
+            clearError(passwordInput);
+            return true;
+          }
+        }
 
-      // Tambahkan event listener untuk setiap header accordion
-      accordionItems.forEach((item) => {
-        const header = item.querySelector('.accordion-header');
+        function validateConfirmPassword() {
+          if (confirmPasswordInput.value === '') {
+            showError(confirmPasswordInput, 'Konfirmasi password tidak boleh kosong');
+            return false;
+          } else if (confirmPasswordInput.value !== passwordInput.value) {
+            showError(confirmPasswordInput, 'Password tidak cocok');
+            return false;
+          } else {
+            clearError(confirmPasswordInput);
+            return true;
+          }
+        }
 
-        header.addEventListener('click', () => {
-          // Toggle active class
-          const isActive = item.classList.contains('active');
+        function validateTerms() {
+          if (!termsCheckbox.checked) {
+            termsCheckbox.classList.add('is-invalid');
+            return false;
+          } else {
+            termsCheckbox.classList.remove('is-invalid');
+            return true;
+          }
+        }
 
-          // Tutup semua accordion items terlebih dahulu
-          accordionItems.forEach((accItem) => {
-            accItem.classList.remove('active');
-          });
+        // Event listeners for real-time validation
+        fullnameInput.addEventListener('input', validateFullname);
+        emailInput.addEventListener('input', validateEmail);
+        phoneInput.addEventListener('input', validatePhone);
+        passwordInput.addEventListener('input', validatePassword);
+        confirmPasswordInput.addEventListener('input', validateConfirmPassword);
+        termsCheckbox.addEventListener('change', validateTerms);
 
-          // Buka yang diklik jika sebelumnya tertutup
-          if (!isActive) {
-            item.classList.add('active');
+        // Submit button event listener
+        registerButton.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const isFullnameValid = validateFullname();
+          const isEmailValid = validateEmail();
+          const isPhoneValid = validatePhone();
+          const isPasswordValid = validatePassword();
+          const isConfirmPasswordValid = validateConfirmPassword();
+          const isTermsChecked = validateTerms();
+
+          if (isFullnameValid && isEmailValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid && isTermsChecked) {
+            // Show success message using Bootstrap modal or alert
+            const successAlert = document.createElement('div');
+            successAlert.className = 'alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3';
+            successAlert.style.zIndex = '9999';
+            successAlert.innerHTML = `
+              <strong>Pendaftaran Berhasil!</strong> Silakan cek email Anda untuk verifikasi.
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            document.body.appendChild(successAlert);
+
+            // Reset form
+            document.querySelector('.registration-form').reset();
+            document.querySelectorAll('.is-valid').forEach((el) => el.classList.remove('is-valid'));
+
+            // Remove alert after 5 seconds
+            setTimeout(() => {
+              if (successAlert.parentNode) {
+                successAlert.remove();
+              }
+            }, 5000);
+          } else {
+            // Scroll to first error
+            const firstInvalid = document.querySelector('.is-invalid');
+            if (firstInvalid) {
+              firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
           }
         });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>
