@@ -5,7 +5,7 @@ untuk memenuhi tugas desain web, kami kelompok 5 yang beranggotakan :
 
 * Ibnu Rizal Khoirru Rokhim [@IbnoeRizal](https://github.com/IbnoeRizal)
 * Haidar Ahadya Al-mansuri [@hydarlm](https://github.com/hydarlm)
-* Jovanda Kelvin [@jovandAa](https://github.com/jovandAa)
+* Jovanda Kelvin Wibawa Putra [@jovandAa](https://github.com/jovandAa)
 
 
 mendesain halaman website dengan menggunakan [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),dan [Javascript](https://www.javascripttutorial.net/) dengan metode embeded, yaitu metode penulisan langsung pada tag khusus HTML
