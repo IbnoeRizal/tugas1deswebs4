@@ -4,144 +4,196 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katalog Barang - BerkahSeken</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
       }
-      
-      .bg-gradient-primary {
-        background: linear-gradient(135deg, #34b67a, #2a9d8f) !important;
+
+      body {
+        background-color: #f7f9fc;
+        color: #333;
+        line-height: 1.6;
       }
-      
-      .text-accent {
-        color: #ffd166 !important;
-      }
-      
-      .btn-gradient {
+
+      .header {
         background: linear-gradient(135deg, #34b67a, #2a9d8f);
-        border: none;
         color: white;
-        transition: all 0.3s ease;
+        padding: 1.5rem 0;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
       }
-      
-      .btn-gradient:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
-        color: white;
-      }
-      
-      .header-custom {
-            background: linear-gradient(135deg, #34b67a, #2a9d8f);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white !important;
-            text-decoration: none;
-        }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
 
-        .logo span {
-            color: #ffd166;
-        }
-
-        .navbar-custom {
-            background-color: white;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .navbar-nav .nav-link {
-            color: #333 !important;
-            font-weight: 500;
-            padding: 1rem 1.5rem !important;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: #34b67a !important;
-            border-bottom: 3px solid #34b67a;
-            background-color: #eefff7;
-        }
-      
-      .product-card {
-        transition: transform 0.3s ease;
-        border: none;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      }
-      
-      .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      }
-      
-      .product-image {
-        height: 200px;
-        overflow: hidden;
-      }
-      
-      .product-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-      }
-      
-      .product-card:hover .product-image img {
-        transform: scale(1.05);
-      }
-      
-      .condition-badge {
-        background: #e9f7ef !important;
-        color: #34b67a !important;
-      }
-      
-      .price-text {
-        color: #2a9d8f;
+      .logo {
+        font-size: 1.8rem;
         font-weight: 700;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
       }
-      
-      .pagination .page-link {
+
+      .logo span {
+        color: #ffd166;
+      }
+
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-list li {
+        margin: 0;
+      }
+
+      .nav-list a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+      }
+
+      .nav-list a:hover,
+      .nav-list a.active {
         color: #34b67a;
-        border-color: #dee2e6;
+        border-bottom: 3px solid #34b67a;
       }
-      
-      .pagination .page-item.active .page-link {
-        background-color: #34b67a;
-        border-color: #34b67a;
+
+      .nav-list a.active {
+        background-color: #eefff7;
       }
-      
-      .pagination .page-link:hover {
-        background-color: #f0f7f4;
-        border-color: #34b67a;
-        color: #34b67a;
+
+      .content {
+        display: flex;
+        margin-top: 2rem;
+        gap: 2rem;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 2rem;
       }
-      
+
+      .filter-sidebar {
+        width: 25%;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: fit-content;
+      }
+
       .filter-title {
         color: #2a9d8f;
-        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
         padding-bottom: 0.5rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .filter-group {
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .filter-group input[type='checkbox'] {
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      .filter-group label {
+        cursor: pointer;
+      }
+
+      .price-range {
+        display: flex;
+        gap: 0.5rem;
         margin-bottom: 1rem;
       }
-      
+
+      .price-input {
+        width: 50%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .btn {
+        padding: 0.6rem 1rem;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #34b67a, #2a9d8f);
+        color: white;
+        box-shadow: 0 4px 10px rgba(42, 157, 143, 0.2);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: #34b67a;
+        border: 1px solid #34b67a;
+      }
+
+      .btn-outline:hover {
+        background: #f0f7f4;
+      }
+
+      .filter-apply {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      .product-section {
+        width: 75%;
+      }
+
       .content-title {
         color: #2a9d8f;
+        margin-bottom: 1.2rem;
+        font-size: 1.8rem;
         position: relative;
         padding-bottom: 0.5rem;
       }
-      
+
       .content-title:after {
         content: '';
         position: absolute;
@@ -151,233 +203,436 @@
         height: 3px;
         background: #ffd166;
       }
-      
-      .modal-header {
-        background: linear-gradient(135deg, #34b67a, #2a9d8f);
+
+      .filter-bar {
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1.5rem;
+        align-items: center;
+      }
+
+      .filter-options {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .filter-select {
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .search-bar {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .search-input {
+        padding: 0.5rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 240px;
+      }
+
+      .search-btn {
+        padding: 0.5rem 1rem;
+        background: #34b67a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-info {
+        padding: 1rem;
+      }
+
+      .product-condition {
+        display: inline-block;
+        background: #e9f7ef;
+        color: #34b67a;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-name {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        height: 2.4em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      }
+
+      .product-price {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #2a9d8f;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-date {
+        font-size: 0.8rem;
+        color: #888;
+        margin-bottom: 1rem;
+      }
+
+      .product-action {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .product-action .btn {
+        flex: 1;
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .pagination-item {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background: white;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .pagination-item:hover {
+        background: #f0f7f4;
+      }
+
+      .pagination-item.active {
+        background: #34b67a;
         color: white;
       }
-      
-      .modal-header .btn-close {
-        filter: invert(1);
+
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background-color: white;
+        margin: auto;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+        position: relative;
+        animation: modalOpen 0.3s ease;
+      }
+
+      @keyframes modalOpen {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .close-modal {
+        position: absolute;
+        right: 1.5rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #888;
+      }
+
+      .close-modal:hover {
+        color: #333;
+      }
+
+      .product-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .product-detail-image {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .product-detail-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-detail-info h3 {
+        font-size: 1.5rem;
+        color: #2a9d8f;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-detail-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #2a9d8f;
+        margin-bottom: 1rem;
+      }
+
+      .product-detail-description {
+        margin-bottom: 1rem;
+      }
+
+      .product-detail-action {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .success-message {
+        background-color: #e9f7ef;
+        color: #34b67a;
+        padding: 0.8rem;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 1rem;
+        display: none;
+      }
+
+      .footer {
+        background: #264653;
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      /* Responsif untuk mobile */
+      @media (max-width: 768px) {
+        .navbar ul {
+          flex-direction: column;
+        }
+
+        .navbar a {
+          text-align: center;
+        }
+
+        .content {
+          flex-direction: column;
+        }
+
+        .filter-sidebar,
+        .product-section {
+          width: 100%;
+        }
+
+        .filter-bar {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .search-bar {
+          width: 100%;
+        }
+
+        .search-input {
+          flex: 1;
+        }
+
+        .product-grid {
+          grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        }
+
+        .product-detail {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
-  <body class="bg-light">
-    <!-- Header -->
-    <header class="header-custom text-white py-3">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <div class="d-flex justify-content-center">
-                      <a href="index.html" class="logo text-decoration-none">
-                          Berkah<span>Seken</span>
-                      </a>
-                  </div>
-              </div>
-          </div>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="logo">Berkah<span>Seken</span></a>
       </div>
-  </header>
+    </header>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" href="#">Katalog Barang</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="CaraDaftar.html">Cara Daftar</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="daftar.html">Daftar</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="kontak.html">Kontak</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
-
-    <!-- Main Content -->
-    <div class="container mt-4">
-      <div class="row">
-        <!-- Filter Sidebar -->
-        <div class="col-lg-3 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="filter-title">Filter Kategori</h5>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="elektronik" checked>
-                <label class="form-check-label" for="elektronik">Elektronik</label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="otomotif" checked>
-                <label class="form-check-label" for="otomotif">Otomotif</label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="hobi" checked>
-                <label class="form-check-label" for="hobi">Hobi & Koleksi</label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="fashion" checked>
-                <label class="form-check-label" for="fashion">Fashion</label>
-              </div>
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="furniture" checked>
-                <label class="form-check-label" for="furniture">Furniture</label>
-              </div>
-
-              <h5 class="filter-title">Kondisi</h5>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="kondisiA" checked>
-                <label class="form-check-label" for="kondisiA">Kondisi A (Seperti Baru)</label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="kondisiB" checked>
-                <label class="form-check-label" for="kondisiB">Kondisi B (Bagus)</label>
-              </div>
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="kondisiC" checked>
-                <label class="form-check-label" for="kondisiC">Kondisi C (Cukup)</label>
-              </div>
-
-              <h5 class="filter-title">Rentang Harga</h5>
-              <div class="row mb-3">
-                <div class="col-6">
-                  <input type="text" class="form-control" placeholder="Min" id="price-min">
-                </div>
-                <div class="col-6">
-                  <input type="text" class="form-control" placeholder="Max" id="price-max">
-                </div>
-              </div>
-              <button class="btn btn-gradient w-100" id="apply-filter">Terapkan Filter</button>
-            </div>
-          </div>
+    <div class="container">
+      <nav class="navbar">
+        <div class="nav-container">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">Katalog Barang</a></li>
+            <li><a href="CaraDaftar.html">Cara Daftar</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
         </div>
+      </nav>
 
-        <!-- Product Section -->
-        <div class="col-lg-9">
-          <h2 class="content-title mb-4">Katalog Barang Seken</h2>
+      <main class="content">
+        <aside class="filter-sidebar">
+          <h3 class="filter-title">Filter Kategori</h3>
+          <div class="filter-group"><input type="checkbox" id="elektronik" checked /><label for="elektronik">Elektronik</label></div>
+          <div class="filter-group"><input type="checkbox" id="otomotif" checked /><label for="otomotif">Otomotif</label></div>
+          <div class="filter-group"><input type="checkbox" id="hobi" checked /><label for="hobi">Hobi & Koleksi</label></div>
+          <div class="filter-group"><input type="checkbox" id="fashion" checked /><label for="fashion">Fashion</label></div>
+          <div class="filter-group"><input type="checkbox" id="furniture" checked /><label for="furniture">Furniture</label></div>
 
-          <!-- Filter Bar -->
-          <div class="card mb-4">
-            <div class="card-body">
-              <div class="row align-items-center">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <div class="d-flex align-items-center">
-                    <label class="me-2 fw-medium">Urutkan:</label>
-                    <select class="form-select" id="sort-select" style="width: auto;">
-                      <option value="latest">Terbaru</option>
-                      <option value="price-low">Harga Terendah</option>
-                      <option value="price-high">Harga Tertinggi</option>
-                      <option value="rating">Rating Tertinggi</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Cari produk..." id="search-input">
-                    <button class="btn btn-outline-success" type="button" id="search-button">
-                      <i class="bi bi-search"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
+          <h3 class="filter-title">Kondisi</h3>
+          <div class="filter-group"><input type="checkbox" id="kondisiA" checked /><label for="kondisiA">Kondisi A (Seperti Baru)</label></div>
+          <div class="filter-group"><input type="checkbox" id="kondisiB" checked /><label for="kondisiB">Kondisi B (Bagus)</label></div>
+          <div class="filter-group"><input type="checkbox" id="kondisiC" checked /><label for="kondisiC">Kondisi C (Cukup)</label></div>
+
+          <h3 class="filter-title">Rentang Harga</h3>
+          <div class="price-range">
+            <input type="text" placeholder="Min" class="price-input" id="price-min" />
+            <input type="text" placeholder="Max" class="price-input" id="price-max" />
+          </div>
+          <button class="btn btn-primary filter-apply" id="apply-filter">Terapkan Filter</button>
+        </aside>
+
+        <section class="product-section">
+          <h2 class="content-title">Katalog Barang Seken</h2>
+
+          <div class="filter-bar">
+            <div class="filter-options">
+              <label>Urutkan:</label>
+              <select class="filter-select" id="sort-select">
+                <option value="latest">Terbaru</option>
+                <option value="price-low">Harga Terendah</option>
+                <option value="price-high">Harga Tertinggi</option>
+                <option value="rating">Rating Tertinggi</option>
+              </select>
+            </div>
+
+            <div class="search-bar">
+              <input type="text" class="search-input" placeholder="Cari produk..." id="search-input" />
+              <button class="search-btn" id="search-button">Cari</button>
             </div>
           </div>
 
-          <!-- Product Grid -->
-          <div class="row" id="product-grid">
-            <!-- Products will be dynamically inserted here -->
+          <div class="product-grid" id="product-grid">
+            <!-- Product cards will be dynamically inserted here -->
           </div>
 
-          <!-- Pagination -->
-          <nav aria-label="Product pagination">
-            <ul class="pagination justify-content-center mt-4" id="pagination">
-              <!-- Pagination items will be dynamically inserted here -->
-            </ul>
-          </nav>
-        </div>
-      </div>
+          <div class="pagination" id="pagination">
+            <!-- Pagination items will be dynamically inserted here -->
+          </div>
+        </section>
+      </main>
     </div>
 
-    <!-- Product Detail Modal -->
-    <div class="modal fade" id="detail-modal" tabindex="-1">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Detail Produk</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <!-- Modal Detail Produk -->
+    <div class="modal" id="detail-modal">
+      <div class="modal-content">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <div class="product-detail">
+          <div class="product-detail-image">
+            <img src="/api/placeholder/600/400" alt="Detail Produk" id="modal-product-image" />
           </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <img src="/api/placeholder/600/400" alt="Detail Produk" class="img-fluid rounded" id="modal-product-image">
-              </div>
-              <div class="col-md-6">
-                <h4 id="modal-product-name" class="text-success">Nama Produk</h4>
-                <h5 class="price-text mb-3" id="modal-product-price">Rp 0</h5>
-                <p id="modal-product-description">
-                  Deskripsi produk akan ditampilkan di sini. Informasi lebih detail mengenai kondisi, spesifikasi, dan riwayat penggunaan barang.
-                </p>
-                <div class="d-grid gap-2 d-md-flex">
-                  <button class="btn btn-gradient flex-fill" id="modal-buy-btn">Beli Sekarang</button>
-                  <button class="btn btn-outline-secondary flex-fill" data-bs-dismiss="modal">Kembali</button>
-                </div>
-                <div class="alert alert-success mt-3 d-none" id="success-message">
-                  Produk berhasil ditambahkan ke keranjang!
-                </div>
-              </div>
+          <div class="product-detail-info">
+            <h3 id="modal-product-name">Nama Produk</h3>
+            <div class="product-detail-price" id="modal-product-price">Rp 0</div>
+            <div class="product-detail-description" id="modal-product-description">
+              Deskripsi produk akan ditampilkan di sini. Informasi lebih detail mengenai kondisi, spesifikasi, dan riwayat penggunaan barang.
+            </div>
+            <div class="product-detail-action">
+              <button class="btn btn-primary" id="modal-buy-btn">Beli Sekarang</button>
+              <button class="btn btn-outline" id="modal-close-btn">Kembali</button>
+            </div>
+            <div class="success-message" id="success-message">
+              Produk berhasil ditambahkan ke keranjang!
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Buy Confirmation Modal -->
-    <div class="modal fade" id="buy-modal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Konfirmasi Pembelian</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body text-center">
-            <p>Apakah Anda yakin ingin membeli <strong id="buy-product-name">Produk ini</strong>?</p>
-            <h5 class="price-text mb-3" id="buy-product-price">Rp 0</h5>
-            <div class="d-grid gap-2 d-md-flex justify-content-center">
-              <button class="btn btn-gradient" id="confirm-buy-btn">Ya, Beli Sekarang</button>
-              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Batalkan</button>
-            </div>
-            <div class="alert alert-success mt-3 d-none" id="buy-success-message">
-              Pembelian berhasil! Silakan cek email Anda untuk konfirmasi.
-            </div>
-          </div>
+    <!-- Modal Beli Sekarang -->
+    <div class="modal" id="buy-modal">
+      <div class="modal-content">
+        <span class="close-modal" id="close-buy-modal">&times;</span>
+        <h3>Konfirmasi Pembelian</h3>
+        <p>Apakah Anda yakin ingin membeli <span id="buy-product-name">Produk ini</span>?</p>
+        <div class="product-detail-price" id="buy-product-price">Rp 0</div>
+        <div class="product-detail-action" style="margin-top: 1.5rem;">
+          <button class="btn btn-primary" id="confirm-buy-btn">Ya, Beli Sekarang</button>
+          <button class="btn btn-outline" id="cancel-buy-btn">Batalkan</button>
+        </div>
+        <div class="success-message" id="buy-success-message">
+          Pembelian berhasil! Silakan cek email Anda untuk konfirmasi.
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-4 mt-5">
-      <div class="container">
-        <p class="mb-0">© 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <div class="footer">© 2025 BerkahSeken - Platform Jual Beli Barang Seken Terpercaya</div>
 
     <script>
-      // Data produk (same as original)
+      // Data produk (expanded with additional products for 5+ pages)
       const products = [
         {
           id: 1,
@@ -489,7 +744,7 @@
           date: "30 Apr 2025",
           image: "img/Fender Stratocaster MIM 2019 - Sunburst.jpg"
         },
-        // Additional products for pagination
+        // Additional products for page 2
         {
           id: 12,
           name: "Samsung Galaxy S24 Ultra - Titanium Black",
@@ -550,6 +805,7 @@
           date: "24 Apr 2025",
           image: "img/Honda Brio RS 2022 - Orange.jpg"
         },
+        // Additional products for page 3
         {
           id: 18,
           name: "Yamaha Keyboard PSR-SX900",
@@ -559,6 +815,16 @@
           description: "Keyboard Yamaha PSR-SX900 dengan 61 keys. Fitur lengkap, suara berkualitas tinggi, dan interface yang intuitif untuk produksi musik.",
           date: "23 Apr 2025",
           image: "img/Yamaha Keyboard PSR-SX900.jpg"
+        },
+        {
+          id: 19,
+          name: "Asus ROG Zephyrus G14 2023",
+          price: 18500000,
+          condition: "A",
+          category: "elektronik",
+          description: "Laptop gaming Asus ROG Zephyrus G14 dengan Ryzen 9 dan RTX 4070. Kondisi seperti baru, performa tinggi dengan portabilitas yang baik.",
+          date: "22 Apr 2025",
+          image: "img/Asus ROG Zephyrus G14 2023.jpg"
         },
         {
           id: 19,
@@ -752,6 +1018,16 @@
       // DOM elements
       const productGrid = document.getElementById('product-grid');
       const pagination = document.getElementById('pagination');
+      const detailModal = document.getElementById('detail-modal');
+      const buyModal = document.getElementById('buy-modal');
+      const closeModal = document.getElementById('close-modal');
+      const closeBuyModal = document.getElementById('close-buy-modal');
+      const modalCloseBtn = document.getElementById('modal-close-btn');
+      const modalBuyBtn = document.getElementById('modal-buy-btn');
+      const cancelBuyBtn = document.getElementById('cancel-buy-btn');
+      const confirmBuyBtn = document.getElementById('confirm-buy-btn');
+      const successMessage = document.getElementById('success-message');
+      const buySuccessMessage = document.getElementById('buy-success-message');
       const searchInput = document.getElementById('search-input');
       const searchButton = document.getElementById('search-button');
       const sortSelect = document.getElementById('sort-select');
@@ -761,6 +1037,7 @@
         return 'Rp ' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
       }
 
+
       function renderProducts() {
         productGrid.innerHTML = '';
         
@@ -769,40 +1046,29 @@
         const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
         
         if (paginatedProducts.length === 0) {
-          productGrid.innerHTML = '<div class="col-12 text-center py-5"><h5>Tidak ada produk yang sesuai dengan filter Anda.</h5></div>';
+          productGrid.innerHTML = '<div style="text-align: center; grid-column: 1/-1; padding: 2rem;">Tidak ada produk yang sesuai dengan filter Anda.</div>';
           return;
         }
         
         paginatedProducts.forEach(product => {
-          const productCol = document.createElement('div');
-          productCol.className = 'col-md-6 col-lg-4 mb-4';
-          
-          const conditionText = {
-            'A': 'Seperti Baru',
-            'B': 'Bagus',
-            'C': 'Cukup'
-          };
-          
-          productCol.innerHTML = `
-            <div class="card product-card h-100">
-              <div class="product-image">
-                <img src="${product.image}" class="card-img-top" alt="${product.name}">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <span class="badge condition-badge mb-2 align-self-start">Kondisi ${product.condition} (${conditionText[product.condition]})</span>
-                <h6 class="card-title" style="height: 3em; overflow: hidden;">${product.name}</h6>
-                <div class="price-text fs-5 mb-2">${formatPrice(product.price)}</div>
-                <small class="text-muted mb-3">${product.date}</small>
-                <div class="mt-auto">
-                  <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-gradient btn-sm detail-btn" data-id="${product.id}">Lihat Detail</button>
-                    <button class="btn btn-outline-success btn-sm buy-btn" data-id="${product.id}">Beli</button>
-                  </div>
-                </div>
+          const productCard = document.createElement('div');
+          productCard.className = 'product-card';
+          productCard.innerHTML = `
+            <div class="product-image">
+              <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="product-info">
+              <span class="product-condition">Kondisi ${product.condition}</span>
+              <h3 class="product-name">${product.name}</h3>
+              <div class="product-price">${formatPrice(product.price)}</div>
+              <div class="product-date">${product.date}</div>
+              <div class="product-action">
+                <button class="btn btn-primary detail-btn" data-id="${product.id}">Lihat Detail</button>
+                <button class="btn btn-outline buy-btn" data-id="${product.id}">Beli</button>
               </div>
             </div>
           `;
-          productGrid.appendChild(productCol);
+          productGrid.appendChild(productCard);
         });
         
         // Add event listeners for buttons after rendering
@@ -825,52 +1091,50 @@
         
         const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
         
-        if (totalPages <= 1) return;
-        
         // Previous button
-        const prevLi = document.createElement('li');
-        prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
-        prevLi.innerHTML = `<a class="page-link" href="#" tabindex="-1">&laquo;</a>`;
         if (currentPage > 1) {
-          prevLi.querySelector('.page-link').addEventListener('click', (e) => {
-            e.preventDefault();
+          const prevBtn = document.createElement('div');
+          prevBtn.className = 'pagination-item';
+          prevBtn.innerHTML = '&laquo;';
+          prevBtn.addEventListener('click', () => {
             currentPage--;
             renderProducts();
             renderPagination();
             window.scrollTo(0, 0);
           });
+          pagination.appendChild(prevBtn);
         }
-        pagination.appendChild(prevLi);
         
         // Page numbers
         for (let i = 1; i <= totalPages; i++) {
-          const pageLi = document.createElement('li');
-          pageLi.className = `page-item ${i === currentPage ? 'active' : ''}`;
-          pageLi.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-          pageLi.querySelector('.page-link').addEventListener('click', (e) => {
-            e.preventDefault();
+          const pageItem = document.createElement('div');
+          pageItem.className = 'pagination-item';
+          if (i === currentPage) {
+            pageItem.classList.add('active');
+          }
+          pageItem.textContent = i;
+          pageItem.addEventListener('click', () => {
             currentPage = i;
             renderProducts();
             renderPagination();
             window.scrollTo(0, 0);
           });
-          pagination.appendChild(pageLi);
+          pagination.appendChild(pageItem);
         }
         
         // Next button
-        const nextLi = document.createElement('li');
-        nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
-        nextLi.innerHTML = `<a class="page-link" href="#">&raquo;</a>`;
         if (currentPage < totalPages) {
-          nextLi.querySelector('.page-link').addEventListener('click', (e) => {
-            e.preventDefault();
+          const nextBtn = document.createElement('div');
+          nextBtn.className = 'pagination-item';
+          nextBtn.innerHTML = '&raquo;';
+          nextBtn.addEventListener('click', () => {
             currentPage++;
             renderProducts();
             renderPagination();
             window.scrollTo(0, 0);
           });
+          pagination.appendChild(nextBtn);
         }
-        pagination.appendChild(nextLi);
       }
 
       // Show product detail modal
