@@ -1,0 +1,145 @@
+* {
+font-family: 'Poppins', sans-serif;
+}
+
+.bg-gradient-primary {
+background: linear-gradient(135deg, #34b67a, #2a9d8f) !important;
+}
+
+.text-accent {
+color: #ffd166 !important;
+}
+
+.btn-gradient {
+background: linear-gradient(135deg, #34b67a, #2a9d8f);
+border: none;
+color: white;
+transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
+color: white;
+}
+
+.header-custom {
+    background: linear-gradient(135deg, #34b67a, #2a9d8f);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white !important;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ffd166;
+}
+
+.navbar-custom {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 1rem 1.5rem !important;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #34b67a !important;
+    border-bottom: 3px solid #34b67a;
+    background-color: #eefff7;
+}
+
+.product-card {
+transition: transform 0.3s ease;
+border: none;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+height: 200px;
+overflow: hidden;
+}
+
+.product-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+transform: scale(1.05);
+}
+
+.condition-badge {
+background: #e9f7ef !important;
+color: #34b67a !important;
+}
+
+.price-text {
+color: #2a9d8f;
+font-weight: 700;
+}
+
+.pagination .page-link {
+color: #34b67a;
+border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+background-color: #34b67a;
+border-color: #34b67a;
+}
+
+.pagination .page-link:hover {
+background-color: #f0f7f4;
+border-color: #34b67a;
+color: #34b67a;
+}
+
+.filter-title {
+color: #2a9d8f;
+border-bottom: 1px solid #dee2e6;
+padding-bottom: 0.5rem;
+margin-bottom: 1rem;
+}
+
+.content-title {
+color: #2a9d8f;
+position: relative;
+padding-bottom: 0.5rem;
+}
+
+.content-title:after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+width: 60px;
+height: 3px;
+background: #ffd166;
+}
+
+.modal-header {
+background: linear-gradient(135deg, #34b67a, #2a9d8f);
+color: white;
+}
+
+.modal-header .btn-close {
+filter: invert(1);
+}
