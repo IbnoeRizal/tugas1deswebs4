@@ -882,8 +882,13 @@
         document.getElementById('modal-product-name').textContent = product.name;
         document.getElementById('modal-product-price').textContent = formatPrice(product.price);
         document.getElementById('modal-product-description').textContent = product.description;
-        
-        detailModal.style.display = 'flex';
+
+        // Hide success message if visible
+        document.getElementById('success-message').classList.add('d-none');
+
+        // Show modal using Bootstrap's modal API
+        const detailModal = new bootstrap.Modal(document.getElementById('detail-modal'));
+        detailModal.show();
       }
 
       // Show buy modal
@@ -893,11 +898,13 @@
         
         document.getElementById('buy-product-name').textContent = product.name;
         document.getElementById('buy-product-price').textContent = formatPrice(product.price);
-        
-        buyModal.style.display = 'flex';
-        
-        // Reset success message
-        buySuccessMessage.style.display = 'none';
+
+        // Hide success message if visible
+        document.getElementById('buy-success-message').classList.add('d-none');
+
+        // Show modal using Bootstrap's modal API
+        const buyModal = new bootstrap.Modal(document.getElementById('buy-modal'));
+        buyModal.show();
       }
 
       // Apply filters
@@ -986,11 +993,8 @@
           case 'rating':
             // Sort by condition (A first, then B, then C)
             filteredProducts.sort((a, b) => {
-              if (a.condition === b.condition) return 0;
-              if (a.condition === 'A') return -1;
-              if (b.condition === 'A') return 1;
-              if (a.condition === 'B') return -1;
-              return 1;
+              const order = { 'A': 1, 'B': 2, 'C': 3 };
+              return order[a.condition] - order[b.condition];
             });
             break;
         }
@@ -1001,77 +1005,65 @@
         // Initial render
         renderProducts();
         renderPagination();
-        
-        // Close detail modal
-        closeModal.addEventListener('click', () => {
-          detailModal.style.display = 'none';
-        });
-        
-        modalCloseBtn.addEventListener('click', () => {
-          detailModal.style.display = 'none';
-        });
-        
-        // Close buy modal
-        closeBuyModal.addEventListener('click', () => {
-          buyModal.style.display = 'none';
-        });
-        
-        cancelBuyBtn.addEventListener('click', () => {
-          buyModal.style.display = 'none';
-        });
-        
-        // Handle modal clicks (close when clicking outside)
-        window.addEventListener('click', (event) => {
-          if (event.target === detailModal) {
-            detailModal.style.display = 'none';
-          }
-          if (event.target === buyModal) {
-            buyModal.style.display = 'none';
-          }
-        });
-        
+
+        // Modal button references
+        const modalBuyBtn = document.getElementById('modal-buy-btn');
+        const successMessage = document.getElementById('success-message');
+        const confirmBuyBtn = document.getElementById('confirm-buy-btn');
+        const buySuccessMessage = document.getElementById('buy-success-message');
+
         // Buy button in detail modal
         modalBuyBtn.addEventListener('click', () => {
           // Show success message
-          successMessage.style.display = 'block';
+          successMessage.classList.remove('d-none');
           
           // Hide success message after 3 seconds
           setTimeout(() => {
-            successMessage.style.display = 'none';
+            successMessage.classList.add('d-none');
           }, 3000);
         });
-        
+
         // Confirm buy button
         confirmBuyBtn.addEventListener('click', () => {
           // Show success message
-          buySuccessMessage.style.display = 'block';
+          buySuccessMessage.classList.remove('d-none');
           
           // Hide success message and close modal after 3 seconds
           setTimeout(() => {
-            buySuccessMessage.style.display = 'none';
-            buyModal.style.display = 'none';
+            buySuccessMessage.classList.add('d-none');
+            // Hide modal using Bootstrap's modal API
+            const buyModalEl = document.getElementById('buy-modal');
+            const buyModal = bootstrap.Modal.getInstance(buyModalEl);
+            if (buyModal) buyModal.hide();
           }, 3000);
         });
-        
+
         // Apply filter button
         applyFilterBtn.addEventListener('click', applyFilters);
-        
+
         // Search button
         searchButton.addEventListener('click', applyFilters);
-        
+
         // Search on Enter key
         searchInput.addEventListener('keyup', (event) => {
           if (event.key === 'Enter') {
             applyFilters();
           }
         });
-        
+
         // Sort select
         sortSelect.addEventListener('change', () => {
           applySorting();
           renderProducts();
         });
       });
+        
+        // Sort select
+        sortSelect.addEventListener('change', () => {
+          applySorting();
+          renderProducts();
+        });
+      ;
     </script>
   </body>
 </html>
