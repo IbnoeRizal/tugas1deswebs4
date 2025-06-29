@@ -1,0 +1,199 @@
+ body {
+     font-family: 'Poppins', sans-serif;
+     background-color: #f7f9fc;
+     line-height: 1.6;
+ }
+
+ .header-custom {
+     background: linear-gradient(135deg, #34b67a, #2a9d8f);
+     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .logo {
+     font-size: 1.8rem;
+     font-weight: 700;
+     color: white !important;
+     text-decoration: none;
+ }
+
+ .logo span {
+     color: #ffd166;
+ }
+
+ .navbar-custom {
+     background-color: white;
+     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+ }
+
+ .navbar-nav .nav-link {
+     color: #333 !important;
+     font-weight: 500;
+     padding: 1rem 1.5rem !important;
+     border-bottom: 3px solid transparent;
+     transition: all 0.3s ease;
+ }
+
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+     color: #34b67a !important;
+     border-bottom: 3px solid #34b67a;
+     background-color: #eefff7;
+ }
+
+ .content-section {
+     background-color: white;
+     border-radius: 10px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+ }
+
+ .section-title {
+     color: #2a9d8f;
+     position: relative;
+     padding-bottom: 0.5rem;
+     margin-bottom: 1.5rem;
+ }
+
+ .section-title:after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 60px;
+     height: 3px;
+     background: #ffd166;
+ }
+
+ .member-card {
+     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+     border: 1px solid #dee2e6;
+     border-radius: 15px;
+     transition: all 0.3s ease;
+     height: 100%;
+     overflow: hidden;
+     position: relative;
+ }
+
+ .member-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+     border-color: #34b67a;
+ }
+
+ .member-card::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 4px;
+     background: linear-gradient(135deg, #34b67a, #2a9d8f);
+ }
+
+ .member-photo {
+     width: 120px;
+     height: 120px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 4px solid #34b67a;
+     margin: 0 auto 1rem;
+     background: linear-gradient(135deg, #34b67a, #2a9d8f);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     font-size: 3rem;
+     font-weight: bold;
+     overflow: hidden;
+     box-shadow: 0 4px 15px rgba(52, 182, 122, 0.3);
+ }
+
+ .member-photo img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 50%;
+ }
+
+ .member-name {
+     color: #2a9d8f;
+     font-weight: 600;
+     font-size: 1.3rem;
+     margin-bottom: 0.5rem;
+ }
+
+ .member-nim {
+     color: #6c757d;
+     font-weight: 500;
+     font-size: 0.95rem;
+     margin-bottom: 1rem;
+ }
+
+ .member-role {
+     background: linear-gradient(135deg, #34b67a, #2a9d8f);
+     color: white;
+     padding: 0.4rem 1rem;
+     border-radius: 20px;
+     font-size: 0.85rem;
+     font-weight: 500;
+     display: inline-block;
+     margin-bottom: 1rem;
+ }
+
+ .member-details {
+     text-align: left;
+ }
+
+ .detail-item {
+     display: flex;
+     align-items: center;
+     margin-bottom: 0.7rem;
+     font-size: 0.9rem;
+ }
+
+ .detail-item i {
+     color: #34b67a;
+     margin-right: 0.7rem;
+     width: 16px;
+ }
+
+ .detail-item span {
+     color: #495057;
+ }
+
+ .team-stats {
+     background: linear-gradient(135deg, #eefff7, #f0f7f4);
+     border-radius: 10px;
+     padding: 2rem;
+     margin-bottom: 2rem;
+ }
+
+ .stat-item {
+     text-align: center;
+ }
+
+ .stat-number {
+     font-size: 2.5rem;
+     font-weight: 700;
+     color: #2a9d8f;
+     display: block;
+ }
+
+ .stat-label {
+     color: #6c757d;
+     font-size: 0.9rem;
+     font-weight: 500;
+ }
+
+ .footer-custom {
+     background: #264653;
+     color: white;
+ }
+
+ .team-intro {
+     background: linear-gradient(135deg, #34b67a, #2a9d8f);
+     color: white;
+     border-radius: 10px;
+     padding: 2rem;
+     margin-bottom: 2rem;
+     text-align: center;
+ }
